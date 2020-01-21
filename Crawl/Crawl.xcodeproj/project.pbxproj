@@ -27,7 +27,6 @@
 		8C9B42D123D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B42C523D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf */; };
 		8C9B42D223D26E4F009EF0C5 /* NewYorkLarge-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B42C623D26E4F009EF0C5 /* NewYorkLarge-BlackItalic.otf */; };
 		8C9B42D423D686FE009EF0C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B42D323D686FE009EF0C5 /* Podfile */; };
-		8CB1D04E23D697D4002F9FA5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1D04D23D697D4002F9FA5 /* Keys.swift */; };
 		8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1D04F23D69AC2002F9FA5 /* HomeViewController.swift */; };
 		8CB1D05223D785B0002F9FA5 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1D05123D785B0002F9FA5 /* style.json */; };
 		D69C49C5610481D1413D5B78 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03340AE2D17F983D30C3CF6F /* libPods-Crawl.a */; };
@@ -79,7 +78,6 @@
 		8C9B42C523D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewYorkLarge-HeavyItalic.otf"; path = "../../../../../../../../Library/Fonts/NewYorkLarge-HeavyItalic.otf"; sourceTree = "<group>"; };
 		8C9B42C623D26E4F009EF0C5 /* NewYorkLarge-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewYorkLarge-BlackItalic.otf"; path = "../../../../../../../../Library/Fonts/NewYorkLarge-BlackItalic.otf"; sourceTree = "<group>"; };
 		8C9B42D323D686FE009EF0C5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		8CB1D04D23D697D4002F9FA5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8CB1D04F23D69AC2002F9FA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8CB1D05123D785B0002F9FA5 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		E62A1DDEFDD827A2335FBB92 /* Pods-Crawl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crawl.release.xcconfig"; path = "Target Support Files/Pods-Crawl/Pods-Crawl.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				8C9B429323D26925009EF0C5 /* Assets.xcassets */,
 				8C9B429523D26925009EF0C5 /* LaunchScreen.storyboard */,
 				8C9B429823D26925009EF0C5 /* Info.plist */,
-				8CB1D04D23D697D4002F9FA5 /* Keys.swift */,
 				8CB1D04F23D69AC2002F9FA5 /* HomeViewController.swift */,
 				8CB1D05123D785B0002F9FA5 /* style.json */,
 			);
@@ -394,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB1D04E23D697D4002F9FA5 /* Keys.swift in Sources */,
 				8C9B428F23D26924009EF0C5 /* LaunchViewController.swift in Sources */,
 				8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */,
 				8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */,
