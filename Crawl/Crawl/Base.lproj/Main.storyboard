@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="Crawl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,9 +57,42 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="jRL-Lh-wAL" kind="presentation" identifier="launchToHomeSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Nqf-xr-Sxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="JNn-mJ-oe0">
+            <objects>
+                <viewController title="HomeViewController" id="jRL-Lh-wAL" customClass="HomeViewController" customModule="Crawl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6C-Qb-i8D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-B2-l7N" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iEt-B2-l7N" firstAttribute="leading" secondItem="hMi-gO-kmf" secondAttribute="leading" id="NEN-qX-QGo"/>
+                            <constraint firstItem="iEt-B2-l7N" firstAttribute="trailing" secondItem="hMi-gO-kmf" secondAttribute="trailing" id="RI5-5b-zf0"/>
+                            <constraint firstItem="iEt-B2-l7N" firstAttribute="bottom" secondItem="N6C-Qb-i8D" secondAttribute="bottom" id="Rev-Vb-C8t"/>
+                            <constraint firstItem="iEt-B2-l7N" firstAttribute="top" secondItem="hMi-gO-kmf" secondAttribute="top" id="sQp-D8-uoC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hMi-gO-kmf"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="iEt-B2-l7N" id="V2D-mJ-qjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdx-Vs-zXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="27"/>
         </scene>
     </scenes>
 </document>
