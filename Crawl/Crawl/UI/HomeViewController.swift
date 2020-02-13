@@ -13,21 +13,21 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
     
-    private let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        getUserLocation()
         loadMap()
         addBottomSheetView()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        locationManager.stopUpdatingLocation()
+    }
+    
     func loadMap() {
-        getUserLocation()
-        let camera = GMSCameraPosition.camera(withLatitude: 38.804, longitude: -84.50, zoom: 12.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 0.0, longitude: 0.0, zoom: 8.0)
         let gmsMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         gmsMapView.isMyLocationEnabled = true
         do {
