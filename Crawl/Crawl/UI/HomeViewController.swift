@@ -13,6 +13,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
     
+    private let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,7 +27,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func loadMap() {
         getUserLocation()
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 80.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 38.804, longitude: -84.50, zoom: 12.0)
         let gmsMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         gmsMapView.isMyLocationEnabled = true
         do {
@@ -57,7 +59,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getUserLocation() {
-        let locationManager = CLLocationManager()
         if !CLLocationManager.locationServicesEnabled() {
             getLocationPermission(locationManager: locationManager)
         }

@@ -24,7 +24,7 @@ class CrawlView: UIView {
     
     func initCrawlView() {
         Bundle(for: type(of: self)).loadNibNamed("CrawlView", owner: self, options: nil)
-        view.frame = self.bounds
-        addSubview(view)
+        //view.frame = self.bounds
+        //addSubview(view)
     }
 }

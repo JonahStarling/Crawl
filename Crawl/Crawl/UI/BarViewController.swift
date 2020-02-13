@@ -67,12 +67,16 @@ class BarViewController: UIViewController {
     }
     
     func prepareBackgroundView() {
-        let barView = BarView.init(frame: UIScreen.main.bounds)
-        
         view.clipsToBounds = true
         view.layer.cornerRadius = 20
-        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        view.insertSubview(barView, at: 0)
+        //view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.layer.masksToBounds = false
+
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowRadius = 2.0
     }
     
 }
