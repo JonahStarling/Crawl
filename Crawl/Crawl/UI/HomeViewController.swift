@@ -11,29 +11,38 @@ import GoogleMaps
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var mapView: GMSMapView!
+    var mapView: GMSMapView?
     
-    let locationManager = CLLocationManager()
+    static let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserLocation()
         loadMap()
         addBottomSheetView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getUserLocation()
+        
+        BarRepository.getAllBars()
+        CrawlRepository.getAllCrawls()
+        DealRepository.getAllDeals()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
-        locationManager.stopUpdatingLocation()
+        HomeViewController.locationManager.stopUpdatingLocation()
     }
     
     func loadMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: 38.647457, longitude: -90.257309, zoom: 6.0)
-        let gmsMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        let camera = GMSCameraPosition.camera(withLatitude: 38.0406, longitude: -84.5037, zoom: 12.0)
+        let gmsMapView = GMSMapView.map(withFrame: view.frame, camera: camera)
         gmsMapView.isMyLocationEnabled = true
+        gmsMapView.setMinZoom(12.0, maxZoom: 16.0)
         do {
             // Set the map style by passing the URL of the local file.
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                gmsMapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
             } else {
                 NSLog("Unable to find style.json")
             }
@@ -41,11 +50,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
         mapView = gmsMapView
+        view.addSubview(mapView!)
     }
     
     func addBottomSheetView() {
         // 1- Init bottomSheetVC
-        let bottomSheetVC = BarViewController()
+        let bottomSheetVC = BarViewController(nibName: "BarViewController", bundle: nil)
 
         // 2- Add bottomSheetVC as a child view
         self.addChild(bottomSheetVC)
@@ -60,13 +70,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func getUserLocation() {
         if !CLLocationManager.locationServicesEnabled() {
-            getLocationPermission(locationManager: locationManager)
+            getLocationPermission(locationManager: HomeViewController.locationManager)
         }
         
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+            HomeViewController.locationManager.delegate = self
+            HomeViewController.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            HomeViewController.locationManager.startUpdatingLocation()
+            mapView?.animate(toZoom: 14.0)
         }
     }
     
@@ -80,6 +91,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func animateToLocation(newLocation: CLLocationCoordinate2D) {
-        mapView.animate(toLocation: newLocation)
+        mapView?.animate(toLocation: newLocation)
     }
 }

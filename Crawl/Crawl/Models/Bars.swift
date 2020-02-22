@@ -9,11 +9,15 @@
 import Foundation
 
 class Bars {
-    var allBars = Dictionary<String, Bar>()
+    static var allBars = Dictionary<String, Bar>()
 }
 
-struct Bar: Codable {
+struct Bar {
     let id: String
+    var data: BarData
+}
+
+struct BarData: Codable {
     let name: String
     let info: String
     let lat: Float

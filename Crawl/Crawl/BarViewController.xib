@@ -12,9 +12,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarView" customModule="Crawl" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarViewController" customModule="Crawl" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="Czh-aZ-oPn"/>
+                <outlet property="barName" destination="bgm-RZ-GOP" id="hRo-VC-RIQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="4uF-rx-ceh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,8 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Bar #001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-RZ-GOP">
-                    <rect key="frame" x="156" y="50" width="102.5" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-RZ-GOP" userLabel="barName">
+                    <rect key="frame" x="179.5" y="50" width="55" height="21"/>
                     <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -35,7 +36,7 @@
                 <constraint firstItem="bgm-RZ-GOP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pWv-SJ-5ig"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>
     </objects>
 </document>

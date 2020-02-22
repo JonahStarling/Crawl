@@ -3,4 +3,5 @@ target 'Crawl' do
     pod 'GoogleMaps'
     pod 'Firebase/Analytics'
     pod 'Firebase/Firestore'
+    pod 'CodableFirebase'
 end

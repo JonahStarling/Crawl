@@ -8,48 +8,27 @@
 
 import Foundation
 import Firebase
+import CodableFirebase
 
 class CrawlRepository {
     
-    let crawlRef = FirebaseManager.db.collection("crawls")
+    private static let crawlRef = FirebaseManager.db.collection("crawls")
     
-    func getAllCrawls() -> Array<Crawl> {
-        var crawls = Array<Crawl>()
+    static func getAllCrawls() {
         crawlRef.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    crawls.append(self.parseCrawl(document: document))
+                    let crawlData = try! FirestoreDecoder().decode(CrawlData.self, from: document.data())
+                    let crawl = Crawl(id: document.documentID, data: crawlData)
+                    Crawls.allCrawls.updateValue(crawl, forKey: crawl.id)
                 }
             }
         }
-        return crawls
     }
     
-    func parseCrawl(document: QueryDocumentSnapshot) -> Crawl {
-        let data = document.data()
-        do {
-        let json = JSONSerialization.data(withJSONObject: data, options: [])
-        
-        let crawlId = document.documentID
-        let crawlName = data["name"] as? String ?? ""
-        let crawlInfo = data["info"] as? String ?? ""
-        let crawlTimeframe = data["timeframe"] as? String ?? ""
-        
-        let bars = parseBars(barsArray: barsArray)
-            
-        } catch <#pattern#> {
-            <#statements#>
-        }
-        
-        let newCrawl = Crawl(id: crawlId, name: crawlName)
-        return newCrawl
-    }
-    
-    func parseBars(array: NSArray?) -> Array<Bar> {
-        var bars = Array<Bar>()
-        
-        return bars
+    static func getCrawl(id: String) -> Crawl? {
+        return Crawls.allCrawls[id]
     }
 }

@@ -11,7 +11,7 @@
 		8C52679B23E45EC400955AAE /* Deals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52679A23E45EC400955AAE /* Deals.swift */; };
 		8C52679D23E45ED800955AAE /* Crawls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52679C23E45ED800955AAE /* Crawls.swift */; };
 		8C80C34E23F226370006D95F /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C34D23F226370006D95F /* BarViewController.swift */; };
-		8C80C35023F2935A0006D95F /* BarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80C34F23F2935A0006D95F /* BarView.xib */; };
+		8C80C35023F2935A0006D95F /* BarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80C34F23F2935A0006D95F /* BarViewController.xib */; };
 		8C80C35223F295B00006D95F /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35123F295B00006D95F /* BarView.swift */; };
 		8C80C35623F2B33F0006D95F /* CrawlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35523F2B33F0006D95F /* CrawlView.swift */; };
 		8C80C35823F2B3860006D95F /* CrawlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35723F2B3860006D95F /* CrawlViewController.swift */; };
@@ -42,7 +42,7 @@
 		8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFADF23FF50AD00D4E287 /* CrawlRepository.swift */; };
 		8CFEFAE223FF50BC00D4E287 /* BarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE123FF50BC00D4E287 /* BarRepository.swift */; };
 		8CFEFAE423FF50CE00D4E287 /* DealRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE323FF50CE00D4E287 /* DealRepository.swift */; };
-		8CFEFAE623FF544F00D4E287 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE523FF544F00D4E287 /* FirebaseManager.swift */; };
+		8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,7 @@
 		8C52679A23E45EC400955AAE /* Deals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deals.swift; sourceTree = "<group>"; };
 		8C52679C23E45ED800955AAE /* Crawls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawls.swift; sourceTree = "<group>"; };
 		8C80C34D23F226370006D95F /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
-		8C80C34F23F2935A0006D95F /* BarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarView.xib; sourceTree = "<group>"; };
+		8C80C34F23F2935A0006D95F /* BarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarViewController.xib; sourceTree = "<group>"; };
 		8C80C35123F295B00006D95F /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		8C80C35523F2B33F0006D95F /* CrawlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlView.swift; sourceTree = "<group>"; };
 		8C80C35723F2B3860006D95F /* CrawlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		8CFEFADF23FF50AD00D4E287 /* CrawlRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlRepository.swift; sourceTree = "<group>"; };
 		8CFEFAE123FF50BC00D4E287 /* BarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarRepository.swift; sourceTree = "<group>"; };
 		8CFEFAE323FF50CE00D4E287 /* DealRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealRepository.swift; sourceTree = "<group>"; };
-		8CFEFAE523FF544F00D4E287 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Crawl/FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
+		8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +195,7 @@
 		8C9B428B23D26924009EF0C5 /* Crawl */ = {
 			isa = PBXGroup;
 			children = (
+				8CFEFAEC2401BB3C00D4E287 /* Utilities */,
 				8CFEFADE23FF503E00D4E287 /* Services */,
 				8C52679623E4569700955AAE /* Models */,
 				8C52679523E4568000955AAE /* UI */,
@@ -207,7 +208,7 @@
 				8CFEFADC23FF4D0000D4E287 /* GoogleService-Info.plist */,
 				8CB1D05123D785B0002F9FA5 /* style.json */,
 				8CB85F8723D7A86100011E12 /* Keys.swift */,
-				8C80C34F23F2935A0006D95F /* BarView.xib */,
+				8C80C34F23F2935A0006D95F /* BarViewController.xib */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -255,9 +256,16 @@
 				8CFEFADF23FF50AD00D4E287 /* CrawlRepository.swift */,
 				8CFEFAE123FF50BC00D4E287 /* BarRepository.swift */,
 				8CFEFAE323FF50CE00D4E287 /* DealRepository.swift */,
-				8CFEFAE523FF544F00D4E287 /* FirebaseManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8CFEFAEC2401BB3C00D4E287 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E564AB451E605F762E8739B2 /* Frameworks */ = {
@@ -391,7 +399,7 @@
 				8CFEFADD23FF4D0000D4E287 /* GoogleService-Info.plist in Resources */,
 				8C9B429223D26924009EF0C5 /* Main.storyboard in Resources */,
 				8C9B42D023D26E4F009EF0C5 /* NewYorkLarge-Bold.otf in Resources */,
-				8C80C35023F2935A0006D95F /* BarView.xib in Resources */,
+				8C80C35023F2935A0006D95F /* BarViewController.xib in Resources */,
 				8C9B42D123D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf in Resources */,
 				8C9B42CC23D26E4F009EF0C5 /* NewYorkLarge-Regular.otf in Resources */,
 				8CB1D05223D785B0002F9FA5 /* style.json in Resources */,
@@ -473,8 +481,8 @@
 				8C80C34E23F226370006D95F /* BarViewController.swift in Sources */,
 				8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */,
 				8C52679B23E45EC400955AAE /* Deals.swift in Sources */,
-				8CFEFAE623FF544F00D4E287 /* FirebaseManager.swift in Sources */,
 				8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */,
+				8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */,
 				8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */,
 				8CFEFAE223FF50BC00D4E287 /* BarRepository.swift in Sources */,
 			);

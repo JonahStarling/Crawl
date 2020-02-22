@@ -11,20 +11,21 @@ import UIKit
 class BarView: UIView {
     
     @IBOutlet var view: UIView!
+    @IBOutlet weak var barName: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initBarView()
+        let barView = UINib(nibName: "BarView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! BarView
+        barView.frame = self.bounds
+        addSubview(barView)
+        setupBarView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initBarView()
     }
     
-    func initBarView() {
-        Bundle(for: type(of: self)).loadNibNamed("BarView", owner: self, options: nil)
-        view.frame = self.bounds
-        addSubview(view)
+    func setupBarView() {
+        barName.text = "Jonah's Bar"
     }
 }

@@ -9,11 +9,15 @@
 import Foundation
 
 class Deals {
-    var allDeals = Dictionary<String, Deal>()
+    static var allDeals = Dictionary<String, Deal>()
 }
 
-struct Deal: Codable {
+struct Deal {
     let id: String
-    let name: String
-    let timeframe: String
+    var data: DealData
+}
+
+struct DealData: Codable {
+    var name: String
+    var timeframe: String
 }

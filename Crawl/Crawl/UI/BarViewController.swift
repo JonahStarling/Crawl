@@ -10,6 +10,8 @@ import UIKit
 
 class BarViewController: UIViewController {
     
+    @IBOutlet weak var barName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +21,8 @@ class BarViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadBar()
         prepareBackgroundView()
+        loadBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,13 +65,12 @@ class BarViewController: UIViewController {
     }
     
     func loadBar() {
-//        background.addSubview(BarView(frame: background.frame))
+        barName.text = "Jonah's Bar"
     }
     
     func prepareBackgroundView() {
         view.clipsToBounds = true
         view.layer.cornerRadius = 20
-        //view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.layer.masksToBounds = false
 
         view.layer.shadowColor = UIColor.black.cgColor

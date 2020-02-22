@@ -7,3 +7,29 @@
 //
 
 import Foundation
+import Firebase
+import CodableFirebase
+
+class DealRepository {
+    
+    private static let dealRef = FirebaseManager.db.collection("deals")
+    
+    static func getAllDeals() {
+        dealRef.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let dealData = try! FirestoreDecoder().decode(DealData.self, from: document.data())
+                    let deal = Deal(id: document.documentID, data: dealData)
+                    Deals.allDeals.updateValue(deal, forKey: deal.id)
+                }
+            }
+        }
+    }
+    
+    static func getDeal(id: String) -> Deal? {
+        return Deals.allDeals[id]
+    }
+}
+

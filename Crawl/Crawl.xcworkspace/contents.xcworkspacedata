@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LocationHelper.swift">
+   </FileRef>
+   <FileRef
       location = "group:Crawl.xcodeproj">
    </FileRef>
    <FileRef

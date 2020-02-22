@@ -9,12 +9,16 @@
 import Foundation
 
 class Crawls {
-    var allCrawls = Dictionary<String, Crawl>()
+    static var allCrawls = Dictionary<String, Crawl>()
 }
 
-struct Crawl: Codable {
+struct Crawl {
     let id: String
-    let name: String
+    var data: CrawlData
+}
+
+struct CrawlData: Codable {
+    var name: String
     var info: String
     var timeframe: String
     var barIds: Array<String>
