@@ -43,6 +43,7 @@
 		8CFEFAE223FF50BC00D4E287 /* BarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE123FF50BC00D4E287 /* BarRepository.swift */; };
 		8CFEFAE423FF50CE00D4E287 /* DealRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE323FF50CE00D4E287 /* DealRepository.swift */; };
 		8CFEFAE623FF544F00D4E287 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAE523FF544F00D4E287 /* FirebaseManager.swift */; };
+		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44251A81FE41B2A6D2417172 /* libPods-Crawl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Crawl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		467DEB15F9B066B98A25DD31 /* Pods-Crawl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crawl.debug.xcconfig"; path = "Target Support Files/Pods-Crawl/Pods-Crawl.debug.xcconfig"; sourceTree = "<group>"; };
+		727FD7D08908255B6082E2EE /* Pods-Crawl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crawl.release.xcconfig"; path = "Target Support Files/Pods-Crawl/Pods-Crawl.release.xcconfig"; sourceTree = "<group>"; };
 		8C52679823E45E8D00955AAE /* Bars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bars.swift; sourceTree = "<group>"; };
 		8C52679A23E45EC400955AAE /* Deals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deals.swift; sourceTree = "<group>"; };
 		8C52679C23E45ED800955AAE /* Crawls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawls.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +140,8 @@
 		390A1674098294851FF05C39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				467DEB15F9B066B98A25DD31 /* Pods-Crawl.debug.xcconfig */,
+				727FD7D08908255B6082E2EE /* Pods-Crawl.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 				8C9B42AB23D26925009EF0C5 /* CrawlUITests */,
 				8C9B428A23D26924009EF0C5 /* Products */,
 				390A1674098294851FF05C39 /* Pods */,
+				E564AB451E605F762E8739B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +260,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E564AB451E605F762E8739B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44251A81FE41B2A6D2417172 /* libPods-Crawl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C9B42B123D26925009EF0C5 /* Build configuration list for PBXNativeTarget "Crawl" */;
 			buildPhases = (
+				3C22C4C9776BB678EEE6A096 /* [CP] Check Pods Manifest.lock */,
 				8C9B428523D26924009EF0C5 /* Sources */,
 				8C9B428623D26924009EF0C5 /* Frameworks */,
 				8C9B428723D26924009EF0C5 /* Resources */,
+				D28D193C9232CBBD3E209190 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,6 +414,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C22C4C9776BB678EEE6A096 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crawl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D28D193C9232CBBD3E209190 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crawl/Pods-Crawl-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crawl/Pods-Crawl-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crawl/Pods-Crawl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C9B428523D26924009EF0C5 /* Sources */ = {
@@ -589,6 +649,7 @@
 		};
 		8C9B42B223D26925009EF0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467DEB15F9B066B98A25DD31 /* Pods-Crawl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -607,6 +668,7 @@
 		};
 		8C9B42B323D26925009EF0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727FD7D08908255B6082E2EE /* Pods-Crawl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
