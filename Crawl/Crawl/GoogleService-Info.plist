@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>669785367478-0fbmincbgt6jluvsm653d2h39pe2hdj5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.669785367478-0fbmincbgt6jluvsm653d2h39pe2hdj5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDktD9IOI8t5X7BiMST_nLYczERH70DNuk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>669785367478</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jonahstarling.crawl</string>
+	<key>PROJECT_ID</key>
+	<string>crawl337</string>
+	<key>STORAGE_BUCKET</key>
+	<string>crawl337.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:669785367478:ios:41b40d5ce633b67f735717</string>
+	<key>DATABASE_URL</key>
+	<string>https://crawl337.firebaseio.com</string>
+</dict>
+</plist>

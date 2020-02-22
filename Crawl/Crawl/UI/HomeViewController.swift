@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func loadMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: 0.0, longitude: 0.0, zoom: 8.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 38.647457, longitude: -90.257309, zoom: 6.0)
         let gmsMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         gmsMapView.isMyLocationEnabled = true
         do {

@@ -1,4 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 target 'Crawl' do
     pod 'GoogleMaps'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Firestore'
 end
