@@ -12,8 +12,6 @@
 		8C52679D23E45ED800955AAE /* Crawls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52679C23E45ED800955AAE /* Crawls.swift */; };
 		8C80C34E23F226370006D95F /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C34D23F226370006D95F /* BarViewController.swift */; };
 		8C80C35023F2935A0006D95F /* BarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80C34F23F2935A0006D95F /* BarViewController.xib */; };
-		8C80C35223F295B00006D95F /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35123F295B00006D95F /* BarView.swift */; };
-		8C80C35623F2B33F0006D95F /* CrawlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35523F2B33F0006D95F /* CrawlView.swift */; };
 		8C80C35823F2B3860006D95F /* CrawlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80C35723F2B3860006D95F /* CrawlViewController.swift */; };
 		8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B428C23D26924009EF0C5 /* AppDelegate.swift */; };
 		8C9B428F23D26924009EF0C5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B428E23D26924009EF0C5 /* LaunchViewController.swift */; };
@@ -72,8 +70,6 @@
 		8C52679C23E45ED800955AAE /* Crawls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawls.swift; sourceTree = "<group>"; };
 		8C80C34D23F226370006D95F /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		8C80C34F23F2935A0006D95F /* BarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarViewController.xib; sourceTree = "<group>"; };
-		8C80C35123F295B00006D95F /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		8C80C35523F2B33F0006D95F /* CrawlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlView.swift; sourceTree = "<group>"; };
 		8C80C35723F2B3860006D95F /* CrawlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlViewController.swift; sourceTree = "<group>"; };
 		8C9B428923D26924009EF0C5 /* Crawl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crawl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9B428C23D26924009EF0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,8 +148,6 @@
 				8C9B428E23D26924009EF0C5 /* LaunchViewController.swift */,
 				8CB1D04F23D69AC2002F9FA5 /* HomeViewController.swift */,
 				8C80C34D23F226370006D95F /* BarViewController.swift */,
-				8C80C35123F295B00006D95F /* BarView.swift */,
-				8C80C35523F2B33F0006D95F /* CrawlView.swift */,
 				8C80C35723F2B3860006D95F /* CrawlViewController.swift */,
 			);
 			path = UI;
@@ -471,13 +465,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C52679923E45E8D00955AAE /* Bars.swift in Sources */,
-				8C80C35623F2B33F0006D95F /* CrawlView.swift in Sources */,
 				8C52679D23E45ED800955AAE /* Crawls.swift in Sources */,
 				8C9B428F23D26924009EF0C5 /* LaunchViewController.swift in Sources */,
 				8CFEFAE423FF50CE00D4E287 /* DealRepository.swift in Sources */,
 				8C80C35823F2B3860006D95F /* CrawlViewController.swift in Sources */,
 				8CB85F8823D7A86100011E12 /* Keys.swift in Sources */,
-				8C80C35223F295B00006D95F /* BarView.swift in Sources */,
 				8C80C34E23F226370006D95F /* BarViewController.swift in Sources */,
 				8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */,
 				8C52679B23E45EC400955AAE /* Deals.swift in Sources */,
