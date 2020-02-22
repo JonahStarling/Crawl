@@ -19,8 +19,8 @@ class CrawlViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadCrawl()
         prepareBackgroundView()
+        loadCrawl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,12 +66,15 @@ class CrawlViewController: UIViewController {
     }
     
     func prepareBackgroundView() {
-        let crawlView = CrawlView.init(frame: UIScreen.main.bounds)
-        
         view.clipsToBounds = true
         view.layer.cornerRadius = 20
-        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        view.insertSubview(crawlView, at: 0)
+        view.layer.masksToBounds = false
+
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowRadius = 2.0
     }
     
 }
