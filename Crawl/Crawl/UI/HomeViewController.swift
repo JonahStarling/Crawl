@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     static let locationManager = CLLocationManager()
     
     private var followUser: Bool = true
-    private var currentBottomSheetVC: BottomSheetViewController = BarListViewController(nibName: "BarListViewController", bundle: nil)
+    private var currentBottomSheet: BottomSheet = ListSelectionViewController(nibName: "ListSelectionViewController", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadBars), name: NSNotification.Name(rawValue: "allBarsLoaded"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.barTapped), name: NSNotification.Name(rawValue: "barTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.crawlTapped), name: NSNotification.Name(rawValue: "crawlTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.barListTapped), name: NSNotification.Name(rawValue: "barListTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.crawlListTapped), name: NSNotification.Name(rawValue: "crawlListTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openNewBottomSheet), name: NSNotification.Name(rawValue: "bottomSheetDismissed"), object: nil)
         
         BarRepository.getAllBars()
@@ -68,6 +70,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
     }
     
+    @objc func barListTapped(notif: Notification) {
+        openBarListVC()
+    }
+    
+    @objc func crawlListTapped(notif: Notification) {
+        openCrawlListVC()
+    }
+    
     func loadMap() {
         let camera = GMSCameraPosition.camera(withLatitude: 38.0406, longitude: -84.5037, zoom: 12.0)
         let gmsMapView = GMSMapView.map(withFrame: view.frame, camera: camera)
@@ -94,38 +104,40 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func openBarVC(bar: Bar) {
         let barVC = BarViewController(nibName: "BarViewController", bundle: nil)
         barVC.bar = bar
-        changeBottomSheetView(bottomSheetVC: barVC)
+        changeBottomSheetView(bottomSheet: barVC)
     }
     
     func openCrawlVC(crawl: Crawl) {
         let crawlVC = CrawlViewController(nibName: "CrawlViewController", bundle: nil)
         crawlVC.crawl = crawl
-        changeBottomSheetView(bottomSheetVC: crawlVC)
+        changeBottomSheetView(bottomSheet: crawlVC)
     }
     
     func openBarListVC() {
         let barListVC = BarListViewController(nibName: "BarListViewController", bundle: nil)
-        changeBottomSheetView(bottomSheetVC: barListVC)
+        changeBottomSheetView(bottomSheet: barListVC)
     }
     
     func openCrawlListVC() {
         let crawlListVC = CrawlListViewController(nibName: "CrawlListViewController", bundle: nil)
-        changeBottomSheetView(bottomSheetVC: crawlListVC)
+        changeBottomSheetView(bottomSheet: crawlListVC)
     }
     
-    func changeBottomSheetView(bottomSheetVC: BottomSheetViewController) {
-        currentBottomSheetVC.dismissBottomSheet()
-        currentBottomSheetVC = bottomSheetVC
+    func changeBottomSheetView(bottomSheet: BottomSheet) {
+        currentBottomSheet.dismissBottomSheet()
+        currentBottomSheet = bottomSheet
     }
     
     @objc func openNewBottomSheet() {
-        self.addChild(currentBottomSheetVC)
-        self.view.addSubview(currentBottomSheetVC.view)
-        currentBottomSheetVC.didMove(toParent: self)
+        if let currentBottomSheetVC = currentBottomSheet as? UIViewController {
+            self.addChild(currentBottomSheetVC)
+            self.view.addSubview(currentBottomSheetVC.view)
+            currentBottomSheetVC.didMove(toParent: self)
 
-        let height = view.frame.height
-        let width  = view.frame.width
-        currentBottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+            let height = view.frame.height
+            let width  = view.frame.width
+            currentBottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        }
     }
     
     func getUserLocation() {

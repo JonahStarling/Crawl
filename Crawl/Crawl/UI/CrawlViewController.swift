@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CrawlViewController: BottomSheetViewController {
+class CrawlViewController: StandardBottomSheetViewController {
     
     @IBOutlet weak var topBar: UIView!
     

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NewYorkLarge-Regular.otf">
+            <string>NewYorkLarge-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListSelectionViewController" customModule="Crawl" customModuleProvider="target">
+            <connections>
+                <outlet property="showBarList" destination="UKf-M4-K2p" id="5up-xZ-ij2"/>
+                <outlet property="showCrawlList" destination="SKN-m1-vs0" id="kBd-uR-6RD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="17v-kV-2hm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-M4-K2p">
+                    <rect key="frame" x="20" y="15" width="177" height="80"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="24"/>
+                    <state key="normal" title="All Bars">
+                        <color key="titleColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showBarList:" destination="-1" eventType="touchUpInside" id="WpG-Dg-FZS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKN-m1-vs0">
+                    <rect key="frame" x="217" y="15" width="177" height="80"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="24"/>
+                    <state key="normal" title="All Crawls">
+                        <color key="titleColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showCrawlList:" destination="-1" eventType="touchUpInside" id="lry-j2-Xv6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SKN-m1-vs0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="28Q-ZU-y6L"/>
+                <constraint firstAttribute="trailing" secondItem="SKN-m1-vs0" secondAttribute="trailing" constant="20" id="2Yb-qP-7xZ"/>
+                <constraint firstItem="UKf-M4-K2p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="KXR-Zx-Uk9"/>
+                <constraint firstItem="UKf-M4-K2p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="jEL-Z9-Qpf"/>
+                <constraint firstAttribute="bottom" secondItem="UKf-M4-K2p" secondAttribute="bottom" constant="25" id="nDP-LN-QDi"/>
+                <constraint firstAttribute="bottom" secondItem="SKN-m1-vs0" secondAttribute="bottom" constant="25" id="osd-BK-A7m"/>
+                <constraint firstItem="UKf-M4-K2p" firstAttribute="width" secondItem="SKN-m1-vs0" secondAttribute="width" id="yDy-83-vc9"/>
+                <constraint firstItem="SKN-m1-vs0" firstAttribute="leading" secondItem="UKf-M4-K2p" secondAttribute="trailing" constant="20" id="yKF-M3-fIX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="132"/>
+        </view>
+    </objects>
+</document>

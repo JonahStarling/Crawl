@@ -43,10 +43,14 @@
 		8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */; };
 		8CFEFAF02402E8A200D4E287 /* BarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */; };
 		8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */; };
-		8CFEFAF42402FC2C00D4E287 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */; };
+		8CFEFAF42402FC2C00D4E287 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF32402FC2C00D4E287 /* BottomSheet.swift */; };
 		8CFEFAF62403017A00D4E287 /* BarListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF52403017A00D4E287 /* BarListViewController.xib */; };
 		8CFEFAF82403170800D4E287 /* CrawlListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF72403170800D4E287 /* CrawlListViewController.xib */; };
 		8CFEFAFA240319BA00D4E287 /* CrawlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF9240319BA00D4E287 /* CrawlViewController.xib */; };
+		8CFEFAFC2403217B00D4E287 /* ListSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAFB2403217B00D4E287 /* ListSelectionViewController.swift */; };
+		8CFEFAFE240321A600D4E287 /* SmallBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAFD240321A600D4E287 /* SmallBottomSheetViewController.swift */; };
+		8CFEFB00240322F600D4E287 /* ListSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFAFF240322F600D4E287 /* ListSelectionViewController.xib */; };
+		8CFEFB022403260F00D4E287 /* StandardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -113,10 +117,14 @@
 		8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListViewController.swift; sourceTree = "<group>"; };
 		8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlListViewController.swift; sourceTree = "<group>"; };
-		8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		8CFEFAF32402FC2C00D4E287 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		8CFEFAF52403017A00D4E287 /* BarListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarListViewController.xib; sourceTree = "<group>"; };
 		8CFEFAF72403170800D4E287 /* CrawlListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrawlListViewController.xib; sourceTree = "<group>"; };
 		8CFEFAF9240319BA00D4E287 /* CrawlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrawlViewController.xib; sourceTree = "<group>"; };
+		8CFEFAFB2403217B00D4E287 /* ListSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectionViewController.swift; sourceTree = "<group>"; };
+		8CFEFAFD240321A600D4E287 /* SmallBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBottomSheetViewController.swift; sourceTree = "<group>"; };
+		8CFEFAFF240322F600D4E287 /* ListSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSelectionViewController.xib; sourceTree = "<group>"; };
+		8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBottomSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +171,10 @@
 				8C80C35723F2B3860006D95F /* CrawlViewController.swift */,
 				8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */,
 				8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */,
-				8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */,
+				8CFEFAF32402FC2C00D4E287 /* BottomSheet.swift */,
+				8CFEFAFB2403217B00D4E287 /* ListSelectionViewController.swift */,
+				8CFEFAFD240321A600D4E287 /* SmallBottomSheetViewController.swift */,
+				8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 				8CFEFAF52403017A00D4E287 /* BarListViewController.xib */,
 				8CFEFAF72403170800D4E287 /* CrawlListViewController.xib */,
 				8CFEFAF9240319BA00D4E287 /* CrawlViewController.xib */,
+				8CFEFAFF240322F600D4E287 /* ListSelectionViewController.xib */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -417,6 +429,7 @@
 				8C9B42D123D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf in Resources */,
 				8C9B42CC23D26E4F009EF0C5 /* NewYorkLarge-Regular.otf in Resources */,
 				8CB1D05223D785B0002F9FA5 /* style.json in Resources */,
+				8CFEFB00240322F600D4E287 /* ListSelectionViewController.xib in Resources */,
 				8CFEFAF82403170800D4E287 /* CrawlListViewController.xib in Resources */,
 				8C9B42C923D26E4F009EF0C5 /* NewYorkLarge-Heavy.otf in Resources */,
 			);
@@ -485,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFEFAFC2403217B00D4E287 /* ListSelectionViewController.swift in Sources */,
 				8C52679923E45E8D00955AAE /* Bars.swift in Sources */,
 				8C52679D23E45ED800955AAE /* Crawls.swift in Sources */,
 				8C9B428F23D26924009EF0C5 /* LaunchViewController.swift in Sources */,
@@ -492,11 +506,13 @@
 				8CFEFAF02402E8A200D4E287 /* BarListViewController.swift in Sources */,
 				8C80C35823F2B3860006D95F /* CrawlViewController.swift in Sources */,
 				8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */,
-				8CFEFAF42402FC2C00D4E287 /* BottomSheetViewController.swift in Sources */,
+				8CFEFAF42402FC2C00D4E287 /* BottomSheet.swift in Sources */,
 				8CB85F8823D7A86100011E12 /* Keys.swift in Sources */,
 				8C80C34E23F226370006D95F /* BarViewController.swift in Sources */,
 				8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */,
 				8C52679B23E45EC400955AAE /* Deals.swift in Sources */,
+				8CFEFAFE240321A600D4E287 /* SmallBottomSheetViewController.swift in Sources */,
+				8CFEFB022403260F00D4E287 /* StandardBottomSheetViewController.swift in Sources */,
 				8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */,
 				8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */,
 				8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */,

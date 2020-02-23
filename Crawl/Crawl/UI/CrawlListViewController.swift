@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CrawlListViewController: BottomSheetViewController {
+class CrawlListViewController: StandardBottomSheetViewController {
     
     @IBOutlet weak var topBar: UIView!
     

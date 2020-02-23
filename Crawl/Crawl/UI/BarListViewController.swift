@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BarListViewController: BottomSheetViewController {
+class BarListViewController: StandardBottomSheetViewController {
     
     @IBOutlet weak var topBar: UIView!
     

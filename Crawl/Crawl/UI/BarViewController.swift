@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BarViewController: BottomSheetViewController {
+class BarViewController: StandardBottomSheetViewController {
     
     @IBOutlet weak var barName: UILabel!
     @IBOutlet weak var topBar: UIView!

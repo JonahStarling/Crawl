@@ -1,5 +1,5 @@
 //
-//  BottomSheetViewController.swift
+//  StandardBottomSheetViewController.swift
 //  Crawl
 //
 //  Created by Jonah Starling on 2/23/20.
@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class BottomSheetViewController: UIViewController {
+class StandardBottomSheetViewController: UIViewController, BottomSheet {
     
     private var smallMode: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(BarListViewController.panGesture))
+        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(StandardBottomSheetViewController.panGesture))
         view.addGestureRecognizer(gesture)
         
     }
