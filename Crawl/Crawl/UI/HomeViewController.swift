@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         NotificationCenter.default.addObserver(self, selector: #selector(self.barListTapped), name: NSNotification.Name(rawValue: "barListTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.crawlListTapped), name: NSNotification.Name(rawValue: "crawlListTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openNewBottomSheet), name: NSNotification.Name(rawValue: "bottomSheetDismissed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openListSelection), name: NSNotification.Name(rawValue: "closeSheet"), object: nil)
         
         BarRepository.getAllBars()
         CrawlRepository.getAllCrawls()
@@ -76,6 +77,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     @objc func crawlListTapped(notif: Notification) {
         openCrawlListVC()
+    }
+    
+    @objc func openListSelection(notif: Notification) {
+        followUser = true
+        mapView?.settings.myLocationButton = !followUser
+        openListSelectionVC()
     }
     
     func loadMap() {
@@ -121,6 +128,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func openCrawlListVC() {
         let crawlListVC = CrawlListViewController(nibName: "CrawlListViewController", bundle: nil)
         changeBottomSheetView(bottomSheet: crawlListVC)
+    }
+    
+    func openListSelectionVC() {
+        let listSelectionVC = ListSelectionViewController(nibName: "ListSelectionViewController", bundle: nil)
+        changeBottomSheetView(bottomSheet: listSelectionVC)
     }
     
     func changeBottomSheetView(bottomSheet: BottomSheet) {

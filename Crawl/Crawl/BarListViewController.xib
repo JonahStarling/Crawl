@@ -52,18 +52,36 @@
                         <action selector="openTestBar:" destination="-1" eventType="touchUpInside" id="0Qx-qG-mif"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dut-BL-7Yd">
+                    <rect key="frame" x="372" y="0.0" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="hpX-yd-jQs"/>
+                        <constraint firstAttribute="width" constant="42" id="wAg-jl-zmr"/>
+                    </constraints>
+                    <color key="tintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    <state key="normal" image="closeCircle"/>
+                    <connections>
+                        <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="QcU-Ur-2Zf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vPk-dO-Edl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1tS-Po-aQp"/>
                 <constraint firstItem="vPk-dO-Edl" firstAttribute="top" secondItem="Yg8-L2-GY3" secondAttribute="bottom" constant="20" id="7dT-zd-lmj"/>
+                <constraint firstItem="dut-BL-7Yd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9IS-dX-QnN"/>
                 <constraint firstItem="Yg8-L2-GY3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cc7-fC-goE"/>
                 <constraint firstItem="cQK-Sj-FtS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="E2c-6E-0Gk"/>
                 <constraint firstItem="Yg8-L2-GY3" firstAttribute="top" secondItem="cQK-Sj-FtS" secondAttribute="bottom" constant="8" id="NC9-s3-vSb"/>
+                <constraint firstAttribute="trailing" secondItem="dut-BL-7Yd" secondAttribute="trailing" id="UW4-3N-Sag"/>
                 <constraint firstItem="cQK-Sj-FtS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rHh-Gp-hMu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="108"/>
         </view>
     </objects>
+    <resources>
+        <image name="closeCircle" width="30" height="30"/>
+    </resources>
 </document>

@@ -36,4 +36,8 @@ class BarListViewController: StandardBottomSheetViewController {
         let userInfo: [String: String] = ["barId": "EwfExtSLMh8OmkYoSPJ7"]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "barTapped"), object: nil, userInfo: userInfo)
     }
+    
+    @IBAction func closeSheet(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "closeSheet"), object: nil)
+    }
 }

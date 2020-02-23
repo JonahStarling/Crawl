@@ -98,9 +98,24 @@
                         <action selector="testNavigation:" destination="-1" eventType="touchUpInside" id="I2S-cG-PrL"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-Vr-gUd">
+                    <rect key="frame" x="372" y="0.0" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="jjc-er-lcr"/>
+                        <constraint firstAttribute="width" constant="42" id="lIr-ln-hNS"/>
+                    </constraints>
+                    <color key="tintColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    <state key="normal" image="closeCircle"/>
+                    <connections>
+                        <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="VlW-Xl-gWV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="6nf-Vr-gUd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="39G-Ac-4KI"/>
+                <constraint firstAttribute="trailing" secondItem="6nf-Vr-gUd" secondAttribute="trailing" id="3lw-vI-IrA"/>
                 <constraint firstAttribute="trailing" secondItem="qBR-ch-pCx" secondAttribute="trailing" constant="20" id="7fJ-yz-Ht1"/>
                 <constraint firstItem="Jbh-jA-GME" firstAttribute="top" secondItem="7wG-3c-1ns" secondAttribute="bottom" constant="4" id="EgP-an-nIV"/>
                 <constraint firstItem="qBR-ch-pCx" firstAttribute="top" secondItem="I2r-ST-IwP" secondAttribute="top" id="Hbu-bh-85c"/>
@@ -123,4 +138,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="closeCircle" width="30" height="30"/>
+    </resources>
 </document>

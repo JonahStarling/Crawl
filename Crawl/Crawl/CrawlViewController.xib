@@ -50,6 +50,19 @@
                         <action selector="navigateToBar:" destination="-1" eventType="touchUpInside" id="WQG-b0-dCH"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyj-Gh-qdM">
+                    <rect key="frame" x="372" y="0.0" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="Bco-kI-zyr"/>
+                        <constraint firstAttribute="width" constant="42" id="f4A-WD-H2B"/>
+                    </constraints>
+                    <color key="tintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    <state key="normal" image="closeCircle"/>
+                    <connections>
+                        <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="4WL-F4-roS"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -59,9 +72,14 @@
                 <constraint firstItem="JDe-6U-qQJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TVm-l6-2Tn"/>
                 <constraint firstItem="L1w-7C-y1s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VjQ-bo-FFO"/>
                 <constraint firstItem="L1w-7C-y1s" firstAttribute="top" secondItem="ski-T2-oNp" secondAttribute="bottom" constant="20" id="x8S-P3-dJf"/>
+                <constraint firstItem="Fyj-Gh-qdM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zZ3-mX-y1G"/>
+                <constraint firstAttribute="trailing" secondItem="Fyj-Gh-qdM" secondAttribute="trailing" id="zmp-kA-6bx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="135" y="132"/>
         </view>
     </objects>
+    <resources>
+        <image name="closeCircle" width="30" height="30"/>
+    </resources>
 </document>

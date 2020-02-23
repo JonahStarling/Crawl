@@ -45,4 +45,8 @@ class BarViewController: StandardBottomSheetViewController {
         let crawlInfo : [String: String] = ["crawlId": "aDBzVYDpMjBo9ykhN35C"]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "crawlTapped"), object: nil, userInfo: crawlInfo)
     }
+    
+    @IBAction func closeSheet(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "closeSheet"), object: nil)
+    }
 }
