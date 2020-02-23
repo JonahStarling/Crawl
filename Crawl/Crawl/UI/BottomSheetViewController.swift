@@ -29,7 +29,7 @@ class BottomSheetViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        animateToSmallMode()
+        animateOpen()
     }
     
     @objc func panGesture(recognizer: UIPanGestureRecognizer) {
@@ -79,6 +79,14 @@ class BottomSheetViewController: UIViewController {
         view.layer.shadowRadius = 2.0
     }
     
+    func animateOpen() {
+        UIView.animate(withDuration: 0.15) { [weak self] in
+            let frame = self?.view.frame
+            let yComponent: CGFloat = UIScreen.main.bounds.height - 200
+            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+        }
+    }
+    
     func animateToSmallMode() {
         UIView.animate(withDuration: 0.3) { [weak self] in
             let frame = self?.view.frame
@@ -96,11 +104,12 @@ class BottomSheetViewController: UIViewController {
     }
     
     func dismissBottomSheet() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
+        UIView.animate(withDuration: 0.15, animations: { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height
             self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
-        }
-        dismiss(animated: false, completion: nil)
+        }, completion: { _ in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "bottomSheetDismissed"), object: nil)
+        })
     }
 }

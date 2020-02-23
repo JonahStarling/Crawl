@@ -27,4 +27,9 @@ class BarListViewController: BottomSheetViewController {
     func loadBarList() {
         // TODO
     }
+    
+    @IBAction func openTestBar(_ sender: Any) {
+        let userInfo: [String: String] = ["barId": "EwfExtSLMh8OmkYoSPJ7"]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "barTapped"), object: nil, userInfo: userInfo)
+    }
 }

@@ -15,12 +15,13 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     static let locationManager = CLLocationManager()
     
-    private var followUser = true
+    private var followUser: Bool = true
+    private var currentBottomSheetVC: BottomSheetViewController = BarListViewController(nibName: "BarListViewController", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMap()
-//        addBottomSheetView()
+        openNewBottomSheet()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadBars), name: NSNotification.Name(rawValue: "allBarsLoaded"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.barTapped), name: NSNotification.Name(rawValue: "barTapped"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.crawlTapped), name: NSNotification.Name(rawValue: "crawlTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openNewBottomSheet), name: NSNotification.Name(rawValue: "bottomSheetDismissed"), object: nil)
         
         BarRepository.getAllBars()
         CrawlRepository.getAllCrawls()
@@ -52,8 +54,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     @objc func barTapped(notif: Notification) {
         if let barId = notif.userInfo?["barId"] as? String {
-            print("Bar id: \(barId)")
-            // TODO: Load bar
+            if let bar = BarRepository.getBar(id: barId) {
+                openBarVC(bar: bar)
+            }
         }
     }
     
@@ -91,17 +94,22 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         let barVC = BarViewController(nibName: "BarViewController", bundle: nil)
         barVC.bar = bar
         
-        addBottomSheetView(bottomSheetVC: barVC)
+        changeBottomSheetView(bottomSheetVC: barVC)
     }
     
-    func addBottomSheetView(bottomSheetVC: UIViewController) {
-        self.addChild(bottomSheetVC)
-        self.view.addSubview(bottomSheetVC.view)
-        bottomSheetVC.didMove(toParent: self)
+    func changeBottomSheetView(bottomSheetVC: BottomSheetViewController) {
+        currentBottomSheetVC.dismissBottomSheet()
+        currentBottomSheetVC = bottomSheetVC
+    }
+    
+    @objc func openNewBottomSheet() {
+        self.addChild(currentBottomSheetVC)
+        self.view.addSubview(currentBottomSheetVC.view)
+        currentBottomSheetVC.didMove(toParent: self)
 
         let height = view.frame.height
         let width  = view.frame.width
-        bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        currentBottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
     }
     
     func getUserLocation() {

@@ -44,6 +44,7 @@
 		8CFEFAF02402E8A200D4E287 /* BarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */; };
 		8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */; };
 		8CFEFAF42402FC2C00D4E287 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */; };
+		8CFEFAF62403017A00D4E287 /* BarListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF52403017A00D4E287 /* BarListViewController.xib */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListViewController.swift; sourceTree = "<group>"; };
 		8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlListViewController.swift; sourceTree = "<group>"; };
 		8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		8CFEFAF52403017A00D4E287 /* BarListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				8CB1D05123D785B0002F9FA5 /* style.json */,
 				8CB85F8723D7A86100011E12 /* Keys.swift */,
 				8C80C34F23F2935A0006D95F /* BarViewController.xib */,
+				8CFEFAF52403017A00D4E287 /* BarListViewController.xib */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			files = (
 				8C9B42CA23D26E4F009EF0C5 /* NewYorkLarge-Medium.otf in Resources */,
 				8C9B429723D26925009EF0C5 /* LaunchScreen.storyboard in Resources */,
+				8CFEFAF62403017A00D4E287 /* BarListViewController.xib in Resources */,
 				8C9B42CF23D26E4F009EF0C5 /* NewYorkLarge-SemiboldItalic.otf in Resources */,
 				8C9B42D223D26E4F009EF0C5 /* NewYorkLarge-BlackItalic.otf in Resources */,
 				8C9B42CD23D26E4F009EF0C5 /* NewYorkLarge-RegularItalic.otf in Resources */,
