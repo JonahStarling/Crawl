@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NewYorkLarge-Regular.otf">
+            <string>NewYorkLarge-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrawlViewController" customModule="Crawl" customModuleProvider="target">
+            <connections>
+                <outlet property="topBar" destination="JDe-6U-qQJ" id="A3F-Fu-VOa"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Yfo-z2-5he"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-6U-qQJ">
+                    <rect key="frame" x="187" y="6" width="40" height="5"/>
+                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="CRH-rJ-jpl"/>
+                        <constraint firstAttribute="height" constant="5" id="l7Q-zC-wlJ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crawl View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ski-T2-oNp">
+                    <rect key="frame" x="104" y="19" width="206.5" height="25.5"/>
+                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="21"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1w-7C-y1s">
+                    <rect key="frame" x="107" y="64.5" width="200" height="30"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="ukS-Mp-kBE"/>
+                    </constraints>
+                    <state key="normal" title="Navigate to Bar">
+                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="navigateToBar:" destination="-1" eventType="touchUpInside" id="WQG-b0-dCH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ski-T2-oNp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CcX-oi-wA5"/>
+                <constraint firstItem="ski-T2-oNp" firstAttribute="top" secondItem="JDe-6U-qQJ" secondAttribute="bottom" constant="8" id="Oib-5d-Lr2"/>
+                <constraint firstItem="JDe-6U-qQJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="SzG-jB-vC1"/>
+                <constraint firstItem="JDe-6U-qQJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TVm-l6-2Tn"/>
+                <constraint firstItem="L1w-7C-y1s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VjQ-bo-FFO"/>
+                <constraint firstItem="L1w-7C-y1s" firstAttribute="top" secondItem="ski-T2-oNp" secondAttribute="bottom" constant="20" id="x8S-P3-dJf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="135" y="132"/>
+        </view>
+    </objects>
+</document>

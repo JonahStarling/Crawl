@@ -62,8 +62,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     @objc func crawlTapped(notif: Notification) {
         if let crawlId = notif.userInfo?["crawlId"] as? String {
-            print("Crawl id: \(crawlId)")
-            // TODO: Load crawl
+            if let crawl = CrawlRepository.getCrawl(id: crawlId) {
+                openCrawlVC(crawl: crawl)
+            }
         }
     }
     
@@ -93,8 +94,23 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func openBarVC(bar: Bar) {
         let barVC = BarViewController(nibName: "BarViewController", bundle: nil)
         barVC.bar = bar
-        
         changeBottomSheetView(bottomSheetVC: barVC)
+    }
+    
+    func openCrawlVC(crawl: Crawl) {
+        let crawlVC = CrawlViewController(nibName: "CrawlViewController", bundle: nil)
+        crawlVC.crawl = crawl
+        changeBottomSheetView(bottomSheetVC: crawlVC)
+    }
+    
+    func openBarListVC() {
+        let barListVC = BarListViewController(nibName: "BarListViewController", bundle: nil)
+        changeBottomSheetView(bottomSheetVC: barListVC)
+    }
+    
+    func openCrawlListVC() {
+        let crawlListVC = CrawlListViewController(nibName: "CrawlListViewController", bundle: nil)
+        changeBottomSheetView(bottomSheetVC: crawlListVC)
     }
     
     func changeBottomSheetView(bottomSheetVC: BottomSheetViewController) {

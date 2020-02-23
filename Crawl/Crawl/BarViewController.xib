@@ -91,7 +91,7 @@
                         <constraint firstAttribute="width" constant="200" id="VIj-0y-awB"/>
                         <constraint firstAttribute="height" constant="30" id="hob-3N-82v"/>
                     </constraints>
-                    <state key="normal" title="Test Navigation">
+                    <state key="normal" title="Navigate to Crawl">
                         <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

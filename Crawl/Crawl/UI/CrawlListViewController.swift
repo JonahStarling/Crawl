@@ -11,8 +11,12 @@ import UIKit
 
 class CrawlListViewController: BottomSheetViewController {
     
+    @IBOutlet weak var topBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topBar.layer.cornerRadius = 2.5
         loadCrawlList()
     }
     
@@ -26,5 +30,10 @@ class CrawlListViewController: BottomSheetViewController {
     
     func loadCrawlList() {
         // TODO
+    }
+    
+    @IBAction func navigateToCrawl(_ sender: Any) {
+        let userInfo: [String: String] = ["crawlId": "aDBzVYDpMjBo9ykhN35C"]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "crawlTapped"), object: nil, userInfo: userInfo)
     }
 }

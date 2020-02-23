@@ -10,8 +10,14 @@ import UIKit
 
 class CrawlViewController: BottomSheetViewController {
     
+    @IBOutlet weak var topBar: UIView!
+    
+    var crawl: Crawl? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topBar.layer.cornerRadius = 2.5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,5 +31,10 @@ class CrawlViewController: BottomSheetViewController {
     
     func loadCrawl() {
         // TODO
+    }
+    
+    @IBAction func navigateToBar(_ sender: Any) {
+        let userInfo: [String: String] = ["barId": "EwfExtSLMh8OmkYoSPJ7"]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "barTapped"), object: nil, userInfo: userInfo)
     }
 }

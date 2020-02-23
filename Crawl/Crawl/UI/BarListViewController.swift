@@ -11,8 +11,12 @@ import UIKit
 
 class BarListViewController: BottomSheetViewController {
     
+    @IBOutlet weak var topBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topBar.layer.cornerRadius = 2.5
         loadBarList()
     }
     

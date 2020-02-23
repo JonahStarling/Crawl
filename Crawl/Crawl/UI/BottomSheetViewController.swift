@@ -80,7 +80,7 @@ class BottomSheetViewController: UIViewController {
     }
     
     func animateOpen() {
-        UIView.animate(withDuration: 0.15) { [weak self] in
+        UIView.animate(withDuration: 0.2) { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height - 200
             self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
@@ -104,7 +104,7 @@ class BottomSheetViewController: UIViewController {
     }
     
     func dismissBottomSheet() {
-        UIView.animate(withDuration: 0.15, animations: { [weak self] in
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height
             self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)

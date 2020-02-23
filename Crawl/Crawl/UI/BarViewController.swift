@@ -23,6 +23,8 @@ class BarViewController: BottomSheetViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topBar.layer.cornerRadius = 2.5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +37,12 @@ class BarViewController: BottomSheetViewController {
     }
     
     func loadBar() {
-        topBar.layer.cornerRadius = 2.5
-        
         barName.text = bar?.data.name
         barInfo.text = bar?.data.info
     }
     
     @IBAction func testNavigation(_ sender: Any) {
-        let crawlInfo : [String: String] = ["crawlId": "a1"]
+        let crawlInfo : [String: String] = ["crawlId": "aDBzVYDpMjBo9ykhN35C"]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "crawlTapped"), object: nil, userInfo: crawlInfo)
     }
 }

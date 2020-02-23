@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarListViewController" customModule="Crawl" customModuleProvider="target">
             <connections>
+                <outlet property="topBar" destination="cQK-Sj-FtS" id="X1N-ls-fch"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YTk-4V-ZtS"/>
             </connections>
         </placeholder>
