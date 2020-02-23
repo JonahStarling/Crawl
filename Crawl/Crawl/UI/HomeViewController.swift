@@ -15,10 +15,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     static let locationManager = CLLocationManager()
     
+    private var followUser = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMap()
-        addBottomSheetView()
+//        addBottomSheetView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +71,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         gmsMapView.delegate = self
         gmsMapView.isMyLocationEnabled = true
         gmsMapView.setMinZoom(12.0, maxZoom: 16.0)
+        gmsMapView.settings.myLocationButton = !followUser
+        gmsMapView.settings.compassButton = true
+        gmsMapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 170, right: 0)
         do {
             // Set the map style by passing the URL of the local file.
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
@@ -83,16 +88,18 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         view.addSubview(mapView!)
     }
     
-    func addBottomSheetView() {
-        // 1- Init bottomSheetVC
-        let bottomSheetVC = BarViewController(nibName: "BarViewController", bundle: nil)
-
-        // 2- Add bottomSheetVC as a child view
+    func openBarVC(bar: Bar) {
+        let barVC = BarViewController(nibName: "BarViewController", bundle: nil)
+        barVC.bar = bar
+        
+        addBottomSheetView(bottomSheetVC: barVC)
+    }
+    
+    func addBottomSheetView(bottomSheetVC: UIViewController) {
         self.addChild(bottomSheetVC)
         self.view.addSubview(bottomSheetVC.view)
         bottomSheetVC.didMove(toParent: self)
 
-        // 3- Adjust bottomSheet frame and initial position.
         let height = view.frame.height
         let width  = view.frame.width
         bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
@@ -116,8 +123,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        animateToLocation(newLocation: location)
+        if followUser {
+            guard let location: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+            animateToLocation(newLocation: location)
+        }
     }
     
     func animateToLocation(newLocation: CLLocationCoordinate2D) {
@@ -125,9 +134,19 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        followUser = false
+        mapView.settings.myLocationButton = !followUser
         if let id = marker.userData as? String {
-            print("User tapped \(BarRepository.getBar(id: id)?.data.name ?? "nil")")
+            if let bar = BarRepository.getBar(id: id) {
+                openBarVC(bar: bar)
+            }
         }
+        return false
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        followUser = true
+        mapView.settings.myLocationButton = !followUser
         return false
     }
 }

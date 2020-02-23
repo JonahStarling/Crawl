@@ -19,6 +19,8 @@ class BarViewController: UIViewController {
     @IBOutlet weak var barBL: UIImageView!
     @IBOutlet weak var barBR: UIImageView!
     
+    var bar: Bar? = nil
+    
     private var smallMode: Bool = true
     
     override func viewDidLoad() {
@@ -99,7 +101,8 @@ class BarViewController: UIViewController {
     func loadBar() {
         topBar.layer.cornerRadius = 2.5
         
-        barName.text = "Jonah's Bar"
+        barName.text = bar?.data.name
+        barInfo.text = bar?.data.info
     }
     
     func prepareBackgroundView() {
