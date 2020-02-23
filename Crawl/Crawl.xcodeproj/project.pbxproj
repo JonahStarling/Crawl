@@ -43,6 +43,7 @@
 		8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */; };
 		8CFEFAF02402E8A200D4E287 /* BarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */; };
 		8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */; };
+		8CFEFAF42402FC2C00D4E287 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		8CFEFAED2401BB4C00D4E287 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListViewController.swift; sourceTree = "<group>"; };
 		8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlListViewController.swift; sourceTree = "<group>"; };
+		8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				8C80C35723F2B3860006D95F /* CrawlViewController.swift */,
 				8CFEFAEF2402E8A200D4E287 /* BarListViewController.swift */,
 				8CFEFAF12402E8AF00D4E287 /* CrawlListViewController.swift */,
+				8CFEFAF32402FC2C00D4E287 /* BottomSheetViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				8CFEFAF02402E8A200D4E287 /* BarListViewController.swift in Sources */,
 				8C80C35823F2B3860006D95F /* CrawlViewController.swift in Sources */,
 				8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */,
+				8CFEFAF42402FC2C00D4E287 /* BottomSheetViewController.swift in Sources */,
 				8CB85F8823D7A86100011E12 /* Keys.swift in Sources */,
 				8C80C34E23F226370006D95F /* BarViewController.swift in Sources */,
 				8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */,

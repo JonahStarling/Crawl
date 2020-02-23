@@ -45,7 +45,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(bar.data.lat), longitude: CLLocationDegrees(bar.data.lon))
             marker.userData = bar.id
-            marker.isFlat = true
             marker.icon = GMSMarker.markerImage(with: .black)
             marker.map = mapView
         }
