@@ -1,28 +1,29 @@
 //
-//  CrawlViewController.swift
+//  CrawlListViewController.swift
 //  Crawl
 //
-//  Created by Jonah Starling on 2/11/20.
+//  Created by Jonah Starling on 2/23/20.
 //  Copyright © 2020 Jonah Starling. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class CrawlViewController: UIViewController {
+class CrawlListViewController: UIViewController {
     
     private var smallMode: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(CrawlViewController.panGesture))
+        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(CrawlListViewController.panGesture))
         view.addGestureRecognizer(gesture)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareBackgroundView()
-        loadCrawl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,10 +85,6 @@ class CrawlViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    func loadCrawl() {
-        // TODO
     }
     
     func prepareBackgroundView() {

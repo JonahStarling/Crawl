@@ -19,6 +19,8 @@ class BarViewController: UIViewController {
     @IBOutlet weak var barBL: UIImageView!
     @IBOutlet weak var barBR: UIImageView!
     
+    private var smallMode: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,17 +58,39 @@ class BarViewController: UIViewController {
             recognizer.setTranslation(CGPoint(x: 0, y: 0), in: self.view)
         } else if recognizer.state == .ended {
             let y = self.view.frame.minY
-            if y < UIScreen.main.bounds.height * 0.5 {
-                UIView.animate(withDuration: 0.3) { [weak self] in
-                    let frame = self?.view.frame
-                    let yComponent: CGFloat = 200
-                    self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+            if smallMode {
+                if y > UIScreen.main.bounds.height - 220 {
+                    // keep in small mode
+                    UIView.animate(withDuration: 0.3) { [weak self] in
+                        let frame = self?.view.frame
+                        let yComponent: CGFloat = UIScreen.main.bounds.height - 200
+                        self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+                    }
+                } else {
+                    // change to big mode
+                    UIView.animate(withDuration: 0.3) { [weak self] in
+                        let frame = self?.view.frame
+                        let yComponent: CGFloat = 200
+                        self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+                    }
+                    smallMode = false
                 }
             } else {
-                UIView.animate(withDuration: 0.3) { [weak self] in
-                    let frame = self?.view.frame
-                    let yComponent: CGFloat = UIScreen.main.bounds.height - 200
-                    self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+                if y < 220 {
+                    // keep in big mode
+                    UIView.animate(withDuration: 0.3) { [weak self] in
+                        let frame = self?.view.frame
+                        let yComponent: CGFloat = 200
+                        self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+                    }
+                } else {
+                    // change to small mode
+                    UIView.animate(withDuration: 0.3) { [weak self] in
+                        let frame = self?.view.frame
+                        let yComponent: CGFloat = UIScreen.main.bounds.height - 200
+                        self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+                    }
+                    smallMode = true
                 }
             }
         }
