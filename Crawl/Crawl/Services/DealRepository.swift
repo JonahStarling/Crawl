@@ -24,6 +24,7 @@ class DealRepository {
                     let deal = Deal(id: document.documentID, data: dealData)
                     Deals.allDeals.updateValue(deal, forKey: deal.id)
                 }
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "allDealsLoaded"), object: nil)
             }
         }
     }

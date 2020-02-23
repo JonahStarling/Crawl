@@ -24,6 +24,7 @@ class CrawlRepository {
                     let crawl = Crawl(id: document.documentID, data: crawlData)
                     Crawls.allCrawls.updateValue(crawl, forKey: crawl.id)
                 }
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "allCrawlsLoaded"), object: nil)
             }
         }
     }

@@ -24,6 +24,7 @@ class BarRepository {
                     let bar = Bar(id: document.documentID, data: barData)
                     Bars.allBars.updateValue(bar, forKey: bar.id)
                 }
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "allBarsLoaded"), object: nil)
             }
         }
     }

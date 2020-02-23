@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     var mapView: GMSMapView?
     
@@ -25,6 +25,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidAppear(animated)
         getUserLocation()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadBars), name: NSNotification.Name(rawValue: "allBarsLoaded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.barTapped), name: NSNotification.Name(rawValue: "barTapped"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.crawlTapped), name: NSNotification.Name(rawValue: "crawlTapped"), object: nil)
+        
         BarRepository.getAllBars()
         CrawlRepository.getAllCrawls()
         DealRepository.getAllDeals()
@@ -34,9 +38,35 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         HomeViewController.locationManager.stopUpdatingLocation()
     }
     
+    @objc func loadBars(notif: Notification) {
+        for bar in Bars.allBars.values {
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(bar.data.lat), longitude: CLLocationDegrees(bar.data.lon))
+            marker.userData = bar.id
+            marker.isFlat = true
+            marker.icon = GMSMarker.markerImage(with: .black)
+            marker.map = mapView
+        }
+    }
+    
+    @objc func barTapped(notif: Notification) {
+        if let barId = notif.userInfo?["barId"] as? String {
+            print("Bar id: \(barId)")
+            // TODO: Load bar
+        }
+    }
+    
+    @objc func crawlTapped(notif: Notification) {
+        if let crawlId = notif.userInfo?["crawlId"] as? String {
+            print("Crawl id: \(crawlId)")
+            // TODO: Load crawl
+        }
+    }
+    
     func loadMap() {
         let camera = GMSCameraPosition.camera(withLatitude: 38.0406, longitude: -84.5037, zoom: 12.0)
         let gmsMapView = GMSMapView.map(withFrame: view.frame, camera: camera)
+        gmsMapView.delegate = self
         gmsMapView.isMyLocationEnabled = true
         gmsMapView.setMinZoom(12.0, maxZoom: 16.0)
         do {
@@ -92,5 +122,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func animateToLocation(newLocation: CLLocationCoordinate2D) {
         mapView?.animate(toLocation: newLocation)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        if let id = marker.userData as? String {
+            print("User tapped \(BarRepository.getBar(id: id)?.data.name ?? "nil")")
+        }
+        return false
     }
 }

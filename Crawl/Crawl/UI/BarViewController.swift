@@ -11,12 +11,20 @@ import UIKit
 class BarViewController: UIViewController {
     
     @IBOutlet weak var barName: UILabel!
+    @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var barInfo: UILabel!
+    
+    @IBOutlet weak var barTL: UIImageView!
+    @IBOutlet weak var barTR: UIImageView!
+    @IBOutlet weak var barBL: UIImageView!
+    @IBOutlet weak var barBR: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(BarViewController.panGesture))
         view.addGestureRecognizer(gesture)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +73,8 @@ class BarViewController: UIViewController {
     }
     
     func loadBar() {
+        topBar.layer.cornerRadius = 2.5
+        
         barName.text = "Jonah's Bar"
     }
     
@@ -80,4 +90,8 @@ class BarViewController: UIViewController {
         view.layer.shadowRadius = 2.0
     }
     
+    @IBAction func testNavigation(_ sender: Any) {
+        let crawlInfo : [String: String] = ["crawlId": "a1"]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "crawlTapped"), object: nil, userInfo: crawlInfo)
+    }
 }
