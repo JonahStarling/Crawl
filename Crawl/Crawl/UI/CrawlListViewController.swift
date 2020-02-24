@@ -45,7 +45,7 @@ class CrawlListViewController: StandardBottomSheetViewController, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Crawls.allCrawls.capacity
+        return Crawls.allCrawls.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

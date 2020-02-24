@@ -55,6 +55,14 @@
 		8CFEFB0624033EF700D4E287 /* BarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0424033EF700D4E287 /* BarCell.xib */; };
 		8CFEFB092403525A00D4E287 /* CrawlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB072403525A00D4E287 /* CrawlCell.swift */; };
 		8CFEFB0A2403525A00D4E287 /* CrawlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB082403525A00D4E287 /* CrawlCell.xib */; };
+		8CFEFB0D24037BCF00D4E287 /* DetailedBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0B24037BCF00D4E287 /* DetailedBarCell.swift */; };
+		8CFEFB0E24037BCF00D4E287 /* DetailedBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0C24037BCF00D4E287 /* DetailedBarCell.xib */; };
+		8CFEFB1124038ACB00D4E287 /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0F24038ACB00D4E287 /* DealCell.swift */; };
+		8CFEFB1224038ACB00D4E287 /* DealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB1024038ACB00D4E287 /* DealCell.xib */; };
+		8CFEFB1424038D3D00D4E287 /* CrawlHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB1324038D3D00D4E287 /* CrawlHeader.swift */; };
+		8CFEFB1624038D6000D4E287 /* CrawlHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB1524038D6000D4E287 /* CrawlHeader.xib */; };
+		8CFEFB1824038E6E00D4E287 /* DealHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB1724038E6E00D4E287 /* DealHeader.swift */; };
+		8CFEFB1A24038E9A00D4E287 /* DealHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB1924038E9A00D4E287 /* DealHeader.xib */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +141,14 @@
 		8CFEFB0424033EF700D4E287 /* BarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCell.xib; sourceTree = "<group>"; };
 		8CFEFB072403525A00D4E287 /* CrawlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlCell.swift; sourceTree = "<group>"; };
 		8CFEFB082403525A00D4E287 /* CrawlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrawlCell.xib; sourceTree = "<group>"; };
+		8CFEFB0B24037BCF00D4E287 /* DetailedBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBarCell.swift; sourceTree = "<group>"; };
+		8CFEFB0C24037BCF00D4E287 /* DetailedBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedBarCell.xib; sourceTree = "<group>"; };
+		8CFEFB0F24038ACB00D4E287 /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
+		8CFEFB1024038ACB00D4E287 /* DealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealCell.xib; sourceTree = "<group>"; };
+		8CFEFB1324038D3D00D4E287 /* CrawlHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlHeader.swift; sourceTree = "<group>"; };
+		8CFEFB1524038D6000D4E287 /* CrawlHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrawlHeader.xib; sourceTree = "<group>"; };
+		8CFEFB1724038E6E00D4E287 /* DealHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealHeader.swift; sourceTree = "<group>"; };
+		8CFEFB1924038E9A00D4E287 /* DealHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +201,10 @@
 				8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */,
 				8CFEFB0324033EF700D4E287 /* BarCell.swift */,
 				8CFEFB072403525A00D4E287 /* CrawlCell.swift */,
+				8CFEFB0B24037BCF00D4E287 /* DetailedBarCell.swift */,
+				8CFEFB0F24038ACB00D4E287 /* DealCell.swift */,
+				8CFEFB1324038D3D00D4E287 /* CrawlHeader.swift */,
+				8CFEFB1724038E6E00D4E287 /* DealHeader.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,6 +265,10 @@
 				8CFEFAFF240322F600D4E287 /* ListSelectionViewController.xib */,
 				8CFEFB0424033EF700D4E287 /* BarCell.xib */,
 				8CFEFB082403525A00D4E287 /* CrawlCell.xib */,
+				8CFEFB0C24037BCF00D4E287 /* DetailedBarCell.xib */,
+				8CFEFB1024038ACB00D4E287 /* DealCell.xib */,
+				8CFEFB1524038D6000D4E287 /* CrawlHeader.xib */,
+				8CFEFB1924038E9A00D4E287 /* DealHeader.xib */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -426,12 +450,16 @@
 				8C9B429723D26925009EF0C5 /* LaunchScreen.storyboard in Resources */,
 				8CFEFAF62403017A00D4E287 /* BarListViewController.xib in Resources */,
 				8C9B42CF23D26E4F009EF0C5 /* NewYorkLarge-SemiboldItalic.otf in Resources */,
+				8CFEFB0E24037BCF00D4E287 /* DetailedBarCell.xib in Resources */,
+				8CFEFB1624038D6000D4E287 /* CrawlHeader.xib in Resources */,
 				8C9B42D223D26E4F009EF0C5 /* NewYorkLarge-BlackItalic.otf in Resources */,
 				8C9B42CD23D26E4F009EF0C5 /* NewYorkLarge-RegularItalic.otf in Resources */,
 				8C9B42CB23D26E4F009EF0C5 /* NewYorkLarge-MediumItalic.otf in Resources */,
 				8C9B42C723D26E4F009EF0C5 /* NewYorkLarge-Black.otf in Resources */,
 				8C9B429423D26925009EF0C5 /* Assets.xcassets in Resources */,
+				8CFEFB1A24038E9A00D4E287 /* DealHeader.xib in Resources */,
 				8C9B42CE23D26E4F009EF0C5 /* NewYorkLarge-Semibold.otf in Resources */,
+				8CFEFB1224038ACB00D4E287 /* DealCell.xib in Resources */,
 				8C9B42C823D26E4F009EF0C5 /* NewYorkLarge-BoldItalic.otf in Resources */,
 				8C9B42D423D686FE009EF0C5 /* Podfile in Resources */,
 				8CFEFAFA240319BA00D4E287 /* CrawlViewController.xib in Resources */,
@@ -523,15 +551,19 @@
 				8CFEFAF22402E8AF00D4E287 /* CrawlListViewController.swift in Sources */,
 				8CFEFAF42402FC2C00D4E287 /* BottomSheet.swift in Sources */,
 				8CB85F8823D7A86100011E12 /* Keys.swift in Sources */,
+				8CFEFB1124038ACB00D4E287 /* DealCell.swift in Sources */,
 				8C80C34E23F226370006D95F /* BarViewController.swift in Sources */,
 				8CFEFAE023FF50AD00D4E287 /* CrawlRepository.swift in Sources */,
 				8C52679B23E45EC400955AAE /* Deals.swift in Sources */,
 				8CFEFAFE240321A600D4E287 /* SmallBottomSheetViewController.swift in Sources */,
+				8CFEFB0D24037BCF00D4E287 /* DetailedBarCell.swift in Sources */,
+				8CFEFB1824038E6E00D4E287 /* DealHeader.swift in Sources */,
 				8CFEFB022403260F00D4E287 /* StandardBottomSheetViewController.swift in Sources */,
 				8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */,
 				8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */,
 				8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */,
 				8CFEFB092403525A00D4E287 /* CrawlCell.swift in Sources */,
+				8CFEFB1424038D3D00D4E287 /* CrawlHeader.swift in Sources */,
 				8CFEFAE223FF50BC00D4E287 /* BarRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

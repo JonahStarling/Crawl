@@ -32,4 +32,5 @@ struct BarData: Codable {
     var photoTR: String
     var photoBL: String
     var photoBR: String
+    var pinURL: String
 }

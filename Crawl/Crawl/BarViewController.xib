@@ -20,6 +20,7 @@
                 <outlet property="barName" destination="bgm-RZ-GOP" id="hRo-VC-RIQ"/>
                 <outlet property="barTL" destination="7wG-3c-1ns" id="6xW-2w-oSt"/>
                 <outlet property="barTR" destination="I2r-ST-IwP" id="Irw-nP-NTd"/>
+                <outlet property="crawlAndDealList" destination="f6i-b5-HoX" id="ZC6-fF-kai"/>
                 <outlet property="topBar" destination="tsl-0l-osS" id="oHv-Sz-6JF"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4uF-rx-ceh"/>
             </connections>
@@ -84,20 +85,6 @@
                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="084-qr-vIZ">
-                    <rect key="frame" x="107" y="200" width="200" height="30"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="VIj-0y-awB"/>
-                        <constraint firstAttribute="height" constant="30" id="hob-3N-82v"/>
-                    </constraints>
-                    <state key="normal" title="Navigate to Crawl">
-                        <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="testNavigation:" destination="-1" eventType="touchUpInside" id="I2S-cG-PrL"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-Vr-gUd">
                     <rect key="frame" x="372" y="0.0" width="42" height="42"/>
                     <constraints>
@@ -111,26 +98,35 @@
                         <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="VlW-Xl-gWV"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-b5-HoX">
+                    <rect key="frame" x="0.0" y="188" width="414" height="708"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexTrackingBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="6nf-Vr-gUd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="39G-Ac-4KI"/>
                 <constraint firstAttribute="trailing" secondItem="6nf-Vr-gUd" secondAttribute="trailing" id="3lw-vI-IrA"/>
+                <constraint firstItem="f6i-b5-HoX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3yO-r2-qkM"/>
                 <constraint firstAttribute="trailing" secondItem="qBR-ch-pCx" secondAttribute="trailing" constant="20" id="7fJ-yz-Ht1"/>
+                <constraint firstAttribute="trailing" secondItem="f6i-b5-HoX" secondAttribute="trailing" id="C8z-0A-ekA"/>
                 <constraint firstItem="Jbh-jA-GME" firstAttribute="top" secondItem="7wG-3c-1ns" secondAttribute="bottom" constant="4" id="EgP-an-nIV"/>
                 <constraint firstItem="qBR-ch-pCx" firstAttribute="top" secondItem="I2r-ST-IwP" secondAttribute="top" id="Hbu-bh-85c"/>
                 <constraint firstItem="7wG-3c-1ns" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="IJt-Nd-Bel"/>
                 <constraint firstItem="7wG-3c-1ns" firstAttribute="top" secondItem="bgm-RZ-GOP" secondAttribute="bottom" constant="8" id="Iaj-J3-fyh"/>
+                <constraint firstAttribute="bottom" secondItem="f6i-b5-HoX" secondAttribute="bottom" id="Ksv-Ln-xHH"/>
                 <constraint firstItem="uHg-ZX-R5f" firstAttribute="leading" secondItem="Jbh-jA-GME" secondAttribute="trailing" constant="4" id="S5E-BH-CqA"/>
                 <constraint firstItem="uHg-ZX-R5f" firstAttribute="top" secondItem="I2r-ST-IwP" secondAttribute="bottom" constant="4" id="ULq-1P-f2E"/>
                 <constraint firstItem="I2r-ST-IwP" firstAttribute="top" secondItem="bgm-RZ-GOP" secondAttribute="bottom" constant="8" id="YaI-AK-Qiy"/>
-                <constraint firstItem="084-qr-vIZ" firstAttribute="top" secondItem="uHg-ZX-R5f" secondAttribute="bottom" constant="20" id="agN-eU-jvx"/>
+                <constraint firstItem="f6i-b5-HoX" firstAttribute="top" secondItem="uHg-ZX-R5f" secondAttribute="bottom" constant="8" id="ZhB-kt-Txa"/>
                 <constraint firstItem="qBR-ch-pCx" firstAttribute="leading" secondItem="I2r-ST-IwP" secondAttribute="trailing" constant="8" id="apx-P9-hJ3"/>
                 <constraint firstItem="I2r-ST-IwP" firstAttribute="leading" secondItem="7wG-3c-1ns" secondAttribute="trailing" constant="4" id="aut-4m-Iev"/>
                 <constraint firstItem="tsl-0l-osS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iHU-tS-ztW"/>
                 <constraint firstItem="bgm-RZ-GOP" firstAttribute="top" secondItem="tsl-0l-osS" secondAttribute="bottom" constant="8" id="jkL-tE-IcT"/>
                 <constraint firstItem="bgm-RZ-GOP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pWv-SJ-5ig"/>
-                <constraint firstItem="084-qr-vIZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="phg-M3-2Ps"/>
                 <constraint firstItem="Jbh-jA-GME" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="t0v-eH-yYq"/>
                 <constraint firstItem="tsl-0l-osS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="w0T-LV-Ixr"/>
             </constraints>

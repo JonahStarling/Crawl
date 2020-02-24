@@ -46,7 +46,7 @@ class BarListViewController: StandardBottomSheetViewController, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Bars.allBars.capacity
+        return Bars.allBars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

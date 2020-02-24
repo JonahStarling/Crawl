@@ -41,7 +41,7 @@ class StandardBottomSheetViewController: UIViewController, BottomSheet {
             } else if newY > UIScreen.main.bounds.height - 200 {
                 newY = UIScreen.main.bounds.height - 200
             }
-            self.view.frame = CGRect(x: 0, y: newY, width: view.frame.width, height: view.frame.height)
+            self.view.frame = CGRect(x: 0, y: newY, width: view.frame.width, height: UIScreen.main.bounds.height - 200)
             recognizer.setTranslation(CGPoint(x: 0, y: 0), in: self.view)
         } else if recognizer.state == .ended {
             let y = self.view.frame.minY
@@ -82,7 +82,7 @@ class StandardBottomSheetViewController: UIViewController, BottomSheet {
         UIView.animate(withDuration: 0.2) { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height - 200
-            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: UIScreen.main.bounds.height - 200)
         }
     }
     
@@ -90,7 +90,7 @@ class StandardBottomSheetViewController: UIViewController, BottomSheet {
         UIView.animate(withDuration: 0.3) { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height - 200
-            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: UIScreen.main.bounds.height - 200)
         }
     }
     
@@ -98,7 +98,7 @@ class StandardBottomSheetViewController: UIViewController, BottomSheet {
         UIView.animate(withDuration: 0.3) { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = 200
-            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: UIScreen.main.bounds.height - 200)
         }
     }
     
@@ -106,7 +106,7 @@ class StandardBottomSheetViewController: UIViewController, BottomSheet {
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             let frame = self?.view.frame
             let yComponent: CGFloat = UIScreen.main.bounds.height
-            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
+            self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: UIScreen.main.bounds.height - 200)
         }, completion: { _ in
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "bottomSheetDismissed"), object: nil)
         })

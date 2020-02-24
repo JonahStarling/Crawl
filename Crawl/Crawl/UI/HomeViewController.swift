@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import Kingfisher
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
@@ -50,9 +51,31 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(bar.data.lat), longitude: CLLocationDegrees(bar.data.lon))
             marker.userData = bar.id
-            marker.icon = GMSMarker.markerImage(with: .black)
+            if let url = URL.init(string: bar.data.pinURL) {
+                let resource = ImageResource(downloadURL: url)
+                KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
+                    switch result {
+                    case .success(let value):
+                        let newWidth = CGFloat.init(60.0)
+                        let newHeight = (newWidth / value.image.size.width) * value.image.size.height
+                        marker.icon = self.imageWithImage(image: value.image, scaledToSize: CGSize(width: newWidth, height: newHeight))
+                    case .failure(_):
+                        marker.icon = GMSMarker.markerImage(with: .black)
+                    }
+                }
+            } else {
+                marker.icon = GMSMarker.markerImage(with: .black)
+            }
             marker.map = mapView
         }
+    }
+    
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     @objc func barTapped(notif: Notification) {

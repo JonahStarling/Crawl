@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NewYorkLarge-Regular.otf">
+            <string>NewYorkLarge-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailedBarCell" rowHeight="103" id="KGk-i7-Jjw" customClass="DetailedBarCell" customModule="Crawl" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1dn-9d-5Pj">
+                        <rect key="frame" x="16" y="8" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Waw-e8-Mr1"/>
+                            <constraint firstAttribute="width" constant="60" id="f2J-YR-QzV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belle's Cocktail House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0r-By-V81">
+                        <rect key="frame" x="84" y="8" width="208" height="25.5"/>
+                        <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="21"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing what multiple lines would need for the height with a max of three lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI5-uS-YIl">
+                        <rect key="frame" x="84" y="34" width="220" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="250" constant="62" id="GgM-Vu-x0N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w0r-By-V81" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Fu2-Mi-0bG"/>
+                    <constraint firstItem="w0r-By-V81" firstAttribute="leading" secondItem="1dn-9d-5Pj" secondAttribute="trailing" constant="8" id="Fvy-j4-obq"/>
+                    <constraint firstAttribute="bottom" secondItem="LI5-uS-YIl" secondAttribute="bottom" constant="8" id="NCJ-Fs-ZUm"/>
+                    <constraint firstItem="LI5-uS-YIl" firstAttribute="top" secondItem="w0r-By-V81" secondAttribute="bottom" constant="0.5" id="OII-3R-aul"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w0r-By-V81" secondAttribute="trailing" constant="16" id="SUI-4N-riD"/>
+                    <constraint firstAttribute="trailing" secondItem="LI5-uS-YIl" secondAttribute="trailing" constant="16" id="Txk-Kk-7TH"/>
+                    <constraint firstItem="LI5-uS-YIl" firstAttribute="leading" secondItem="1dn-9d-5Pj" secondAttribute="trailing" constant="8" id="YaQ-Rs-woI"/>
+                    <constraint firstItem="1dn-9d-5Pj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cjI-6l-fQB"/>
+                    <constraint firstItem="1dn-9d-5Pj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="dVG-yt-qIz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="barImage" destination="1dn-9d-5Pj" id="9y7-Dn-ucx"/>
+                <outlet property="barInfo" destination="LI5-uS-YIl" id="SPh-C1-FgR"/>
+                <outlet property="barName" destination="w0r-By-V81" id="AkC-Ey-SKl"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="151.00446428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
