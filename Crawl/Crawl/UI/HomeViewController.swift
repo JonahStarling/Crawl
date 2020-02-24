@@ -59,6 +59,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         if let barId = notif.userInfo?["barId"] as? String {
             if let bar = BarRepository.getBar(id: barId) {
                 followUser = false
+                mapView?.settings.myLocationButton = !followUser
                 mapView?.animate(toLocation: CLLocationCoordinate2D(latitude: CLLocationDegrees(bar.data.lat), longitude: CLLocationDegrees(bar.data.lon)))
                 openBarVC(bar: bar)
             }

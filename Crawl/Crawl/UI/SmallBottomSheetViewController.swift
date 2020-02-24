@@ -30,7 +30,6 @@ class SmallBottomSheetViewController: UIViewController, BottomSheet {
         view.clipsToBounds = true
         view.layer.cornerRadius = 20
         view.layer.masksToBounds = false
-
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
         view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

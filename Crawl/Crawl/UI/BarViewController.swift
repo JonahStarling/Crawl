@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BarViewController: StandardBottomSheetViewController {
     
@@ -25,10 +26,6 @@ class BarViewController: StandardBottomSheetViewController {
         super.viewDidLoad()
         
         topBar.layer.cornerRadius = 2.5
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         barTL.layer.cornerRadius = 4
         barTR.layer.cornerRadius = 4
@@ -38,6 +35,10 @@ class BarViewController: StandardBottomSheetViewController {
         loadBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -45,6 +46,12 @@ class BarViewController: StandardBottomSheetViewController {
     func loadBar() {
         barName.text = bar?.data.name
         barInfo.text = bar?.data.info
+        
+        barTL.kf.setImage(with: URL(string: bar?.data.photoTL ?? ""))
+        
+        barTR.kf.setImage(with: URL(string: bar?.data.photoTR ?? ""))
+        barBL.kf.setImage(with: URL(string: bar?.data.photoBL ?? ""))
+        barBR.kf.setImage(with: URL(string: bar?.data.photoBR ?? ""))
     }
     
     @IBAction func testNavigation(_ sender: Any) {

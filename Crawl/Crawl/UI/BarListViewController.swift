@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class BarListViewController: StandardBottomSheetViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -52,6 +53,8 @@ class BarListViewController: StandardBottomSheetViewController, UITableViewDeleg
         let cell = self.barList.dequeueReusableCell(withIdentifier: "BarCell") as! BarCell
         let bar = self.bars[indexPath.row]
         cell.barName.text = bar.data.name
+        let url = URL(string: bar.data.photoTL)
+        cell.barImage.kf.setImage(with: url)
         return cell
     }
 }

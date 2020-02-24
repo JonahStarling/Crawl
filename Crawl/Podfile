@@ -4,4 +4,5 @@ target 'Crawl' do
     pod 'Firebase/Analytics'
     pod 'Firebase/Firestore'
     pod 'CodableFirebase'
+    pod 'Kingfisher'
 end

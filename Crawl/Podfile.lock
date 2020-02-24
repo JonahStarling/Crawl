@@ -268,6 +268,9 @@ PODS:
     - gRPC-Core/Interface (= 1.21.0)
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -281,6 +284,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Firestore
   - GoogleMaps
+  - Kingfisher
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -303,6 +307,7 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - Kingfisher
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -327,10 +332,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: d0c6b3a1994594ce258d3205dcdf330ae1abc92b
+PODFILE CHECKSUM: 57fed47fed88598f46158238a1c7d057b3263834
 
 COCOAPODS: 1.8.4
