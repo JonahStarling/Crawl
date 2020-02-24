@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
                     switch result {
                     case .success(let value):
-                        let newWidth = CGFloat.init(60.0)
+                        let newWidth = CGFloat.init(100.0)
                         let newHeight = (newWidth / value.image.size.width) * value.image.size.height
                         marker.icon = self.imageWithImage(image: value.image, scaledToSize: CGSize(width: newWidth, height: newHeight))
                     case .failure(_):
@@ -119,7 +119,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         let gmsMapView = GMSMapView.map(withFrame: view.frame, camera: camera)
         gmsMapView.delegate = self
         gmsMapView.isMyLocationEnabled = true
-        gmsMapView.setMinZoom(12.0, maxZoom: 16.0)
+        gmsMapView.setMinZoom(12.0, maxZoom: 20.0)
         gmsMapView.settings.myLocationButton = !followUser
         gmsMapView.settings.compassButton = true
         gmsMapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 170, right: 0)
