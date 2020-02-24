@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarListViewController" customModule="Crawl" customModuleProvider="target">
             <connections>
+                <outlet property="barList" destination="0ep-TN-c0b" id="a5X-8Q-cNZ"/>
                 <outlet property="topBar" destination="cQK-Sj-FtS" id="X1N-ls-fch"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YTk-4V-ZtS"/>
             </connections>
@@ -33,25 +34,12 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Yr7-31-3uF"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar List View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg8-L2-GY3">
-                    <rect key="frame" x="95.5" y="19" width="223" height="25.5"/>
-                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg8-L2-GY3">
+                    <rect key="frame" x="183" y="19" width="48" height="29"/>
+                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="24"/>
                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPk-dO-Edl">
-                    <rect key="frame" x="82" y="64.5" width="250" height="30"/>
-                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="BQJ-AY-9hm"/>
-                    </constraints>
-                    <state key="normal" title="Navigate To Bar">
-                        <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openTestBar:" destination="-1" eventType="touchUpInside" id="0Qx-qG-mif"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dut-BL-7Yd">
                     <rect key="frame" x="372" y="0.0" width="42" height="42"/>
                     <constraints>
@@ -65,16 +53,25 @@
                         <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="QcU-Ur-2Zf"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-TN-c0b">
+                    <rect key="frame" x="0.0" y="68" width="414" height="828"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexTrackingBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vPk-dO-Edl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1tS-Po-aQp"/>
-                <constraint firstItem="vPk-dO-Edl" firstAttribute="top" secondItem="Yg8-L2-GY3" secondAttribute="bottom" constant="20" id="7dT-zd-lmj"/>
+                <constraint firstAttribute="trailing" secondItem="0ep-TN-c0b" secondAttribute="trailing" id="1et-LT-BFr"/>
                 <constraint firstItem="dut-BL-7Yd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9IS-dX-QnN"/>
+                <constraint firstItem="0ep-TN-c0b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B6L-CK-GWK"/>
                 <constraint firstItem="Yg8-L2-GY3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cc7-fC-goE"/>
                 <constraint firstItem="cQK-Sj-FtS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="E2c-6E-0Gk"/>
+                <constraint firstAttribute="bottom" secondItem="0ep-TN-c0b" secondAttribute="bottom" id="LmW-oN-ILP"/>
                 <constraint firstItem="Yg8-L2-GY3" firstAttribute="top" secondItem="cQK-Sj-FtS" secondAttribute="bottom" constant="8" id="NC9-s3-vSb"/>
                 <constraint firstAttribute="trailing" secondItem="dut-BL-7Yd" secondAttribute="trailing" id="UW4-3N-Sag"/>
+                <constraint firstItem="0ep-TN-c0b" firstAttribute="top" secondItem="Yg8-L2-GY3" secondAttribute="bottom" constant="20" id="lPh-oC-yY2"/>
                 <constraint firstItem="cQK-Sj-FtS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rHh-Gp-hMu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

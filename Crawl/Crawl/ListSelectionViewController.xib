@@ -47,7 +47,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SKN-m1-vs0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="28Q-ZU-y6L"/>
                 <constraint firstAttribute="trailing" secondItem="SKN-m1-vs0" secondAttribute="trailing" constant="20" id="2Yb-qP-7xZ"/>
