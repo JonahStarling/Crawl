@@ -58,6 +58,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @objc func barTapped(notif: Notification) {
         if let barId = notif.userInfo?["barId"] as? String {
             if let bar = BarRepository.getBar(id: barId) {
+                followUser = false
+                mapView?.animate(toLocation: CLLocationCoordinate2D(latitude: CLLocationDegrees(bar.data.lat), longitude: CLLocationDegrees(bar.data.lon)))
                 openBarVC(bar: bar)
             }
         }
@@ -82,6 +84,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @objc func openListSelection(notif: Notification) {
         followUser = true
         mapView?.settings.myLocationButton = !followUser
+        if let userLocation = HomeViewController.locationManager.location?.coordinate {
+            mapView?.animate(toLocation: userLocation)
+        }
         openListSelectionVC()
     }
     
@@ -172,12 +177,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if followUser {
             guard let location: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            animateToLocation(newLocation: location)
+            mapView?.animate(toLocation: location)
         }
-    }
-    
-    func animateToLocation(newLocation: CLLocationCoordinate2D) {
-        mapView?.animate(toLocation: newLocation)
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
