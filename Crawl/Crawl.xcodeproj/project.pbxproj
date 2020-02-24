@@ -53,6 +53,8 @@
 		8CFEFB022403260F00D4E287 /* StandardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */; };
 		8CFEFB0524033EF700D4E287 /* BarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0324033EF700D4E287 /* BarCell.swift */; };
 		8CFEFB0624033EF700D4E287 /* BarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB0424033EF700D4E287 /* BarCell.xib */; };
+		8CFEFB092403525A00D4E287 /* CrawlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEFB072403525A00D4E287 /* CrawlCell.swift */; };
+		8CFEFB0A2403525A00D4E287 /* CrawlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFEFB082403525A00D4E287 /* CrawlCell.xib */; };
 		A38DC5232D4A95883D9FC5F8 /* libPods-Crawl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44251A81FE41B2A6D2417172 /* libPods-Crawl.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,8 @@
 		8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		8CFEFB0324033EF700D4E287 /* BarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCell.swift; sourceTree = "<group>"; };
 		8CFEFB0424033EF700D4E287 /* BarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCell.xib; sourceTree = "<group>"; };
+		8CFEFB072403525A00D4E287 /* CrawlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlCell.swift; sourceTree = "<group>"; };
+		8CFEFB082403525A00D4E287 /* CrawlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrawlCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 				8CFEFAFD240321A600D4E287 /* SmallBottomSheetViewController.swift */,
 				8CFEFB012403260F00D4E287 /* StandardBottomSheetViewController.swift */,
 				8CFEFB0324033EF700D4E287 /* BarCell.swift */,
+				8CFEFB072403525A00D4E287 /* CrawlCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				8CFEFAF9240319BA00D4E287 /* CrawlViewController.xib */,
 				8CFEFAFF240322F600D4E287 /* ListSelectionViewController.xib */,
 				8CFEFB0424033EF700D4E287 /* BarCell.xib */,
+				8CFEFB082403525A00D4E287 /* CrawlCell.xib */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				8C9B429223D26924009EF0C5 /* Main.storyboard in Resources */,
 				8C9B42D023D26E4F009EF0C5 /* NewYorkLarge-Bold.otf in Resources */,
 				8C80C35023F2935A0006D95F /* BarViewController.xib in Resources */,
+				8CFEFB0A2403525A00D4E287 /* CrawlCell.xib in Resources */,
 				8C9B42D123D26E4F009EF0C5 /* NewYorkLarge-HeavyItalic.otf in Resources */,
 				8C9B42CC23D26E4F009EF0C5 /* NewYorkLarge-Regular.otf in Resources */,
 				8CB1D05223D785B0002F9FA5 /* style.json in Resources */,
@@ -524,6 +531,7 @@
 				8C9B428D23D26924009EF0C5 /* AppDelegate.swift in Sources */,
 				8CFEFAEE2401BB4C00D4E287 /* FirebaseManager.swift in Sources */,
 				8CB1D05023D69AC2002F9FA5 /* HomeViewController.swift in Sources */,
+				8CFEFB092403525A00D4E287 /* CrawlCell.swift in Sources */,
 				8CFEFAE223FF50BC00D4E287 /* BarRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

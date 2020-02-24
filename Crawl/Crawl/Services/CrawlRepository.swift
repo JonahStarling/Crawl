@@ -32,4 +32,16 @@ class CrawlRepository {
     static func getCrawl(id: String) -> Crawl? {
         return Crawls.allCrawls[id]
     }
+    
+    static func getAllBarsForCrawlId(id: String) -> Array<Bar> {
+        var bars = Array<Bar>()
+        if let barIds = Crawls.allCrawls[id]?.data.barIds {
+            for barId in barIds {
+                if let bar = BarRepository.getBar(id: barId) {
+                    bars.append(bar)
+                }
+            }
+        }
+        return bars
+    }
 }

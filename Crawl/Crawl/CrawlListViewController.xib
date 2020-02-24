@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrawlListViewController" customModule="Crawl" customModuleProvider="target">
             <connections>
+                <outlet property="crawlList" destination="rUK-3M-5d9" id="RPj-RE-tEb"/>
                 <outlet property="topBar" destination="uZb-a8-WZL" id="lqr-WQ-qFn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KTo-Rg-1dk"/>
             </connections>
@@ -33,25 +34,12 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="mwp-aA-h8L"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crawl List View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlN-vj-vB9">
-                    <rect key="frame" x="84.5" y="19" width="245" height="25.5"/>
-                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crawls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlN-vj-vB9">
+                    <rect key="frame" x="170.5" y="19" width="73" height="29"/>
+                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="24"/>
                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3W-bj-t9h">
-                    <rect key="frame" x="107" y="64.5" width="200" height="30"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="Ysq-cM-eYM"/>
-                    </constraints>
-                    <state key="normal" title="Navigate to Crawl">
-                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="navigateToCrawl:" destination="-1" eventType="touchUpInside" id="ZHh-Ix-Ium"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b09-w4-sZq">
                     <rect key="frame" x="372" y="0.0" width="42" height="42"/>
                     <constraints>
@@ -65,6 +53,13 @@
                         <action selector="closeSheet:" destination="-1" eventType="touchUpInside" id="FtS-sI-Cid"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="78" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rUK-3M-5d9">
+                    <rect key="frame" x="0.0" y="56" width="414" height="840"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexTrackingBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -72,10 +67,12 @@
                 <constraint firstItem="uZb-a8-WZL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LPc-Ia-jak"/>
                 <constraint firstItem="b09-w4-sZq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MJM-Po-7Vg"/>
                 <constraint firstItem="ZlN-vj-vB9" firstAttribute="top" secondItem="uZb-a8-WZL" secondAttribute="bottom" constant="8" id="OcO-Gv-65C"/>
+                <constraint firstItem="rUK-3M-5d9" firstAttribute="top" secondItem="ZlN-vj-vB9" secondAttribute="bottom" constant="8" id="XzI-3a-pP9"/>
+                <constraint firstItem="rUK-3M-5d9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h8c-hK-Z1s"/>
                 <constraint firstAttribute="trailing" secondItem="b09-w4-sZq" secondAttribute="trailing" id="hqS-ax-ZqU"/>
                 <constraint firstItem="uZb-a8-WZL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="mdW-hh-x38"/>
-                <constraint firstItem="S3W-bj-t9h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v93-ig-vYx"/>
-                <constraint firstItem="S3W-bj-t9h" firstAttribute="top" secondItem="ZlN-vj-vB9" secondAttribute="bottom" constant="20" id="xi9-Hn-MpB"/>
+                <constraint firstAttribute="bottom" secondItem="rUK-3M-5d9" secondAttribute="bottom" id="o4c-z0-e7i"/>
+                <constraint firstAttribute="trailing" secondItem="rUK-3M-5d9" secondAttribute="trailing" id="stk-5Y-hnf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="132"/>

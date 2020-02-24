@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NewYorkLarge-Regular.otf">
+            <string>NewYorkLarge-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CrawlCell" rowHeight="78" id="KGk-i7-Jjw" customClass="CrawlCell" customModule="Crawl" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Lexington Bar Crawl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-uZ-Iwp">
+                        <rect key="frame" x="16" y="8" width="288" height="26"/>
+                        <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="21"/>
+                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: 4 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvL-5W-xff">
+                        <rect key="frame" x="16" y="34" width="288" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars: Belle's Cocktail House, Centro, Stagger, Tin Roof, Two Keys" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-pd-gb5">
+                        <rect key="frame" x="16" y="52" width="288" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vKq-uZ-Iwp" secondAttribute="trailing" constant="16" id="Bzs-em-dy5"/>
+                    <constraint firstItem="bvL-5W-xff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="E4I-Yt-Jcf"/>
+                    <constraint firstAttribute="bottom" secondItem="6jh-pd-gb5" secondAttribute="bottom" constant="8" id="GZZ-zp-nGM"/>
+                    <constraint firstAttribute="trailing" secondItem="6jh-pd-gb5" secondAttribute="trailing" constant="16" id="HSq-B7-45H"/>
+                    <constraint firstItem="6jh-pd-gb5" firstAttribute="top" secondItem="bvL-5W-xff" secondAttribute="bottom" id="Hm5-BZ-8rP"/>
+                    <constraint firstItem="vKq-uZ-Iwp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NZH-rG-GiS"/>
+                    <constraint firstAttribute="trailing" secondItem="bvL-5W-xff" secondAttribute="trailing" constant="16" id="V3w-NE-1GC"/>
+                    <constraint firstItem="6jh-pd-gb5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eKF-x8-h4R"/>
+                    <constraint firstItem="bvL-5W-xff" firstAttribute="top" secondItem="vKq-uZ-Iwp" secondAttribute="bottom" id="h3M-G8-sP8"/>
+                    <constraint firstItem="vKq-uZ-Iwp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xvk-8a-Vy1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="crawlBars" destination="6jh-pd-gb5" id="EaS-Z6-sdG"/>
+                <outlet property="crawlDuration" destination="bvL-5W-xff" id="GBQ-uT-zNt"/>
+                <outlet property="crawlName" destination="vKq-uZ-Iwp" id="V3R-FR-ZKB"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="145.3125"/>
+        </tableViewCell>
+    </objects>
+</document>

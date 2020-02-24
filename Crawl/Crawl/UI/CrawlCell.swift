@@ -1,5 +1,5 @@
 //
-//  BarCell.swift
+//  CrawlCell.swift
 //  Crawl
 //
 //  Created by Jonah Starling on 2/23/20.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class BarCell: UITableViewCell {
+class CrawlCell: UITableViewCell {
 
-    @IBOutlet weak var barImage: UIImageView!
-    @IBOutlet weak var barName: UILabel!
+    @IBOutlet weak var crawlName: UILabel!
+    @IBOutlet weak var crawlDuration: UILabel!
+    @IBOutlet weak var crawlBars: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        barImage.layer.cornerRadius = 4
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

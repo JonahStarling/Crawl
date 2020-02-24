@@ -29,6 +29,12 @@ class BarViewController: StandardBottomSheetViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        barTL.layer.cornerRadius = 4
+        barTR.layer.cornerRadius = 4
+        barBL.layer.cornerRadius = 4
+        barBR.layer.cornerRadius = 4
+        
         loadBar()
     }
     

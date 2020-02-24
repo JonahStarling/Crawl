@@ -24,7 +24,6 @@ class BarListViewController: StandardBottomSheetViewController, UITableViewDeleg
         barList.register(UINib(nibName: "BarCell", bundle: nil), forCellReuseIdentifier: "BarCell")
         
         topBar.layer.cornerRadius = 2.5
-        loadBarList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,15 +32,6 @@ class BarListViewController: StandardBottomSheetViewController, UITableViewDeleg
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    func loadBarList() {
-        // TODO
-    }
-    
-    @IBAction func openTestBar(_ sender: Any) {
-        let userInfo: [String: String] = ["barId": "EwfExtSLMh8OmkYoSPJ7"]
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "barTapped"), object: nil, userInfo: userInfo)
     }
     
     @IBAction func closeSheet(_ sender: Any) {

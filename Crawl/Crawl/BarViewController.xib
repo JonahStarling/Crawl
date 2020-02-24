@@ -80,7 +80,7 @@
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="124" id="thG-M0-O7b"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="NewYorkLarge-Regular" family="New York Large" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

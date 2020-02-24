@@ -54,7 +54,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-TN-c0b">
-                    <rect key="frame" x="0.0" y="68" width="414" height="828"/>
+                    <rect key="frame" x="0.0" y="56" width="414" height="840"/>
                     <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="separatorColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +71,7 @@
                 <constraint firstAttribute="bottom" secondItem="0ep-TN-c0b" secondAttribute="bottom" id="LmW-oN-ILP"/>
                 <constraint firstItem="Yg8-L2-GY3" firstAttribute="top" secondItem="cQK-Sj-FtS" secondAttribute="bottom" constant="8" id="NC9-s3-vSb"/>
                 <constraint firstAttribute="trailing" secondItem="dut-BL-7Yd" secondAttribute="trailing" id="UW4-3N-Sag"/>
-                <constraint firstItem="0ep-TN-c0b" firstAttribute="top" secondItem="Yg8-L2-GY3" secondAttribute="bottom" constant="20" id="lPh-oC-yY2"/>
+                <constraint firstItem="0ep-TN-c0b" firstAttribute="top" secondItem="Yg8-L2-GY3" secondAttribute="bottom" constant="8" id="lPh-oC-yY2"/>
                 <constraint firstItem="cQK-Sj-FtS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rHh-Gp-hMu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
