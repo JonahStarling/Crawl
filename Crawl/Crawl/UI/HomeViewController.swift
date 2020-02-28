@@ -226,9 +226,17 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         return false
     }
     
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        if gesture {
+            followUser = false
+            mapView.settings.myLocationButton = !followUser
+        }
+    }
+    
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
         followUser = true
         mapView.settings.myLocationButton = !followUser
+        mapView.animate(toBearing: 0)
         return false
     }
 }
