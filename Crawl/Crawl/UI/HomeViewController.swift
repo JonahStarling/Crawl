@@ -56,9 +56,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
                     switch result {
                     case .success(let value):
-                        let newWidth = CGFloat.init(100.0)
-                        let newHeight = (newWidth / value.image.size.width) * value.image.size.height
-                        marker.icon = self.imageWithImage(image: value.image, scaledToSize: CGSize(width: newWidth, height: newHeight))
+                        marker.icon = self.resizePinImage(image: value.image)
                     case .failure(_):
                         marker.icon = GMSMarker.markerImage(with: .black)
                     }
@@ -70,7 +68,19 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
     }
     
-    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+    func resizePinImage(image: UIImage) -> UIImage{
+        let maxWidth = CGFloat.init(100.0)
+        let maxHeight = CGFloat.init(80.0)
+        var newHeight = CGFloat.init()
+        var newWidth = CGFloat.init()
+        if image.size.width > image.size.height {
+            newHeight = (maxWidth / image.size.width) * image.size.height
+            newWidth = maxWidth
+        } else {
+            newHeight = maxHeight
+            newWidth = (maxHeight / image.size.height) * image.size.width
+        }
+        let newSize = CGSize(width: newWidth, height: newHeight)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
